@@ -1,0 +1,174 @@
+@use "../../../../styles/colors.scss" as *;
+
+// <div className="padding-wrapper container-max-width-1920 story-section">
+//       <div className="future">
+//         <img
+//           className="building-img"
+//           src="/imgs/story-section/story-section-buildings.png"
+//         />
+//         <div className="main">
+//           <div className="text-container">
+//             <div className="title">In the purrfect future...</div>
+//             <div className="description">
+//               сats have taken over as the ultimate rulers. These brilliant
+//               engineers and strategic masterminds claw their way to
+//               <span>power by cryptocurrency mining</span>
+//             </div>
+//           </div>
+//           <Board />
+//         </div>
+//       </div>
+//       <div className="mining">
+//         <Board>
+//           <div className="board-content">
+//             <img className="old-computer-img" src="" alt="" />
+//             <img className="arrow-img" src="" alt="" />
+//             <img className="boxes-img" src="" alt="" />
+//           </div>
+//         </Board>
+//         <div className="text-container">
+//           <div className="title"></div>
+//           <div className="description"></div>
+//           <div className="action-button"></div>
+//         </div>
+//       </div>
+//     </div>
+
+.story-section {
+  background: rgba(22, 22, 22, 1);
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    // content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    top: -208.35px;
+    left: 0px;
+    opacity: 0.5;
+    // transform: rotate(-106.8deg);
+
+    background-image: url("/imgs/story-section/story-section-gradient.png");
+    background-size: cover;
+    z-index: 2;
+  }
+
+  .future {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 72px;
+
+    margin-bottom: 14px;
+
+    .building-img {
+      flex-shrink: 1;
+      //   width: 50%;
+    }
+
+    .main {
+      max-width: 637px;
+      .text-container {
+        .title {
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 48.41px;
+          color: #fff;
+          margin-bottom: 32px;
+        }
+
+        .description {
+          padding: 10px 23px 19px 23px;
+          border-left: 1px solid rgba(255, 255, 255, 1);
+
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 29.05px;
+          color: #fff;
+
+          margin-bottom: 61px;
+        }
+      }
+    }
+  }
+
+  .mining {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 64px;
+
+    .board {
+      flex-grow: 1;
+    //   max-width: 649px;
+      .board-content {
+        
+        height: 100%;
+        // img {
+        //   //   width: 649px;
+        //   //   height: 402px;
+        //   width: 100%;
+        //   height: 100%;
+        // }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 64px;
+        .old-computer-img {
+          max-width: 257px;
+          max-height: 257px;
+
+          width: 100%;
+        }
+        .arrow-img {
+          max-width: 145px;
+          max-height: 145px;
+          width: 100%;
+        }
+        .boxes-img {
+          max-width: 262px;
+          max-height: 262px;
+          width: 100%;
+        }
+      }
+    }
+
+    .text-container {
+      max-width: 450px;
+      width: 100%;
+      .title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48.41px;
+
+        margin-bottom: 39px;
+        color: white;
+      }
+
+      .description {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29.05px;
+        color: white;
+
+        .paragraph1 {
+          margin-bottom: 47px;
+          max-width: 400px;
+        }
+        .paragraph2 {
+          margin-bottom: 47px;
+          max-width: 382px;
+        }
+      }
+
+      .action-button {
+      }
+    }
+  }
+}

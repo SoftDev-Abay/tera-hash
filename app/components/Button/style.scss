@@ -1,0 +1,24 @@
+.btn {
+  padding: 18px 36px;
+  gap: 8px;
+  border-radius: 50px;
+
+  border: 2px solid rgba(110, 182, 60, 1);
+  background: none;
+
+  color: rgba(110, 182, 60, 1);
+  font-family: Inter;
+  font-size: 16px;
+  // font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.04px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+  //   hover
+  &:hover {
+    background-color: rgba(110, 182, 60, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+}

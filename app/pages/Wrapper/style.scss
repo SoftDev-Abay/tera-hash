@@ -1,0 +1,198 @@
+@use "../../../styles/main.scss" as c;
+
+.layout-wrapper {
+  // background-color: c.$color-secondary;
+  background-color: #171717;
+  // min-height: 100vh;
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    min-height: 100vh;
+    // background-color: c.$color-secondary;
+
+    .layout-content {
+      max-width: 1920px;
+      margin: 0 auto;
+      width: 100%;
+
+      padding-bottom: 80px;
+      // background-color: c.$color-secondary;
+    }
+
+    .layout__item__wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 0 36px;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 1920px;
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 50px;
+
+      .navigation {
+        display: flex;
+        gap: 36px;
+
+        a {
+          text-decoration: none;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 24.2px;
+          color: white;
+        }
+      }
+      .social-icons {
+        display: flex;
+        gap: 36px;
+      }
+      .menu-wrapper {
+        display: none;
+        cursor: pointer;
+      }
+
+      @media (max-width: 1024px) {
+        .navigation {
+          display: none;
+        }
+        .social-icons {
+          display: none;
+        }
+        .menu-wrapper {
+          display: block;
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 52px 50px 47px 73px;
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+      }
+
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 36px;
+      }
+
+      .navigation {
+        display: flex;
+        gap: 32px;
+
+        a {
+          text-decoration: none;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 24.2px;
+          color: white;
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 36px;
+      }
+
+      .copyright {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18.15px;
+        text-align: right;
+        max-width: 153px;
+        color: white;
+      }
+
+      .links {
+        display: flex;
+        gap: 24px;
+      }
+    }
+  }
+}
+
+.root-modal-content {
+  nav {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 54px;
+    width: 100%; // Ensure full width if needed
+
+    a {
+      height: 85px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      border-top: 1px solid rgba(51, 51, 51, 0.1); // Apply a top border to all links
+
+      &:last-child {
+        border-bottom: 1px solid rgba(51, 51, 51, 0.1); // Only the last link gets a bottom border
+      }
+
+      &:hover,
+      &:focus {
+        background-color: #f4f4f4; // Light grey background on hover
+      }
+
+      &.active {
+        background-color: #f0f0f0;
+        // Active link background color and text color
+        span {
+          color: #333333;
+        }
+      }
+
+      span {
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0.03999999910593033px;
+        text-transform: uppercase;
+        color: rgba(51, 51, 51, 0.87);
+      }
+    }
+  }
+
+  .root-modal-content__btn__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+    }
+    .btn-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // on button hover change color of svg to white
+
+      &:hover {
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,269 @@
+@use "../../../../styles/colors.scss" as *;
+
+.title-section {
+  min-height: 100vh;
+
+  position: relative;
+  background-image: url("/imgs/title-section/title-section-bg.png");
+  background-size: cover;
+
+  padding-top: 75px;
+
+  overflow: hidden;
+
+  display: flex;
+  gap: 50px;
+
+  .info-container {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 800px;
+    margin: auto 0;
+    padding: 100px 100px;
+
+    .action-text {
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 33.89px;
+      letter-spacing: 0.05em;
+      text-align: center;
+
+      text-transform: uppercase;
+
+      max-width: 428px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .big-text-img {
+      position: relative;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        transform: translateY(-50%);
+
+        // width: 100%;
+        // height: 100%;
+        width: 845px;
+        height: 513px;
+        background-image: url("/imgs/title-section/title-section-big-text-gradient.png");
+        background-size: cover;
+        z-index: 1;
+      }
+    }
+    .addition-text {
+      margin-top: 23px;
+      color: white;
+
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 29.05px;
+      text-align: center;
+
+      max-width: 428px;
+      span {
+        font-weight: 800;
+        color: $color-secondary-yellow;
+      }
+      margin-bottom: 50px;
+    }
+    .action-buttons-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .btn {
+        flex: 1;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 20.57px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        padding: 24px 32px;
+        background: linear-gradient(16.61deg, #edaa00 42.18%, #fcd532 109.17%);
+
+        border-radius: 16px;
+
+        border: 1px solid;
+
+        border-image-source: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.7) 0%,
+          rgba(255, 255, 255, 0.28) 100%
+        );
+
+        box-shadow: 0px 10px 30px 0px #210f0f66, 0px 5px 0px 0px #de6800,
+          0px 4px 40px 0px #efbb2666;
+      }
+    }
+  }
+  .img-container {
+    // w - 740px, h - 746px
+
+    flex-grow: 1;
+    z-index: 1;
+
+    position: absolute;
+    right: -30px;
+    top: 75px;
+    // width: 100%;
+    height: 100%;
+    .main-img-cat {
+      position: relative;
+
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    .gold-coin-tilted-left {
+      position: absolute;
+      width: 177.68px;
+      height: 177.68px;
+
+      // top: 377px;
+      // left: 50px;
+
+      top: 50.5%;
+      left: 6%;
+
+      background-image: url("/imgs/title-section/gold-coin.png");
+      background-size: cover;
+      z-index: 3;
+
+      transform: rotateY(-180deg) rotate(15deg);
+    }
+
+    .gold-coin-tilted-right {
+      position: absolute;
+      width: 261.11px;
+      height: 261.11px;
+
+      // top: 309px;
+      // right: -60px;
+      top: 41.5%;
+      right: -8%;
+
+      background-image: url("/imgs/title-section/gold-coin.png");
+      background-size: cover;
+      z-index: 3;
+
+      transform: rotate(20deg);
+    }
+
+    .gold-coin-blured {
+      position: absolute;
+      width: 199px;
+      height: 199px;
+      // top: 15px;
+      top: 2%;
+      left: 0px;
+      background-image: url("/imgs/title-section/gold-coin-blured.png");
+      background-size: cover;
+      z-index: 3;
+    }
+    .gradient {
+      position: absolute;
+      top: 65%;
+      left: 45%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(
+        44.32% 32.47% at 54.98% 42.93%,
+        #5a9ae3 0%,
+        rgba(40, 105, 186, 0) 100%
+      );
+      width: 629px;
+      height: 827px;
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .title-section {
+    padding-top: 0;
+    flex-direction: column;
+    gap: 0;
+
+    .info-container {
+      padding: 100px 20px 0px 20px;
+
+      .action-text {
+        font-size: 20px;
+        line-height: 24.39px;
+        letter-spacing: 0.05em;
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .big-text-img {
+        .big-text-img {
+          &::before {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .addition-text {
+        font-size: 16px;
+        line-height: 19.51px;
+        max-width: 100%;
+        margin-bottom: 0;
+      }
+      .action-buttons-container {
+        display: none;
+      }
+    }
+    .img-container {
+      position: relative;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      .main-img-cat {
+        width: 100%;
+        height: 100%;
+      }
+      .gold-coin-tilted-left {
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        left: 5%;
+      }
+      .gold-coin-tilted-right {
+        width: 150px;
+        height: 150px;
+        top: 50%;
+        right: 5%;
+      }
+      .gold-coin-blured {
+        width: 100px;
+        height: 100px;
+        top: 2%;
+        left: 0px;
+      }
+      .gradient {
+        // width: 100%;
+        // height: 100%;
+      }
+    }
+  }
+}

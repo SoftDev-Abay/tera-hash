@@ -1,0 +1,51 @@
+@use "./colors.scss" as *;
+
+// if this is present then it deletes spacing for html coming from backend
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: rgba(51, 51, 51, 1);
+}
+
+.container-max-width-1920 {
+  max-width: 1920px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.padding-wrapper {
+  padding-left: 144px;
+  padding-right: 144px;
+
+  @media (max-width: 1536px) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  @media (max-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media (max-width: 1024px) {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.bold-yellow {
+  font-weight: 700;
+  color: $color-secondary-yellow;
+}
