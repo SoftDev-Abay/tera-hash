@@ -1,5 +1,6 @@
 .roadmap-wrapper {
   margin-bottom: 176px;
+
   .header {
     color: #fff;
     text-align: center;
@@ -12,11 +13,20 @@
     margin-bottom: 50px;
   }
   .main {
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 20px;
+
+    .left-cat-img,
+    .right-cat-img {
+      position: relative;
+      z-index: 2;
+
+      // width: 333px;
+    }
 
     .info .text-panel:last-child::after {
       display: none;
@@ -49,6 +59,56 @@
           background-image: url("/ellipses/azure-ellipse.png");
           background-size: cover;
           opacity: 0.5;
+        }
+      }
+
+      .text-panel-progress-bar-wrapper {
+        position: relative;
+
+        .plug-left-img,
+        .plug-right-img {
+          position: absolute;
+          top: 50%;
+          z-index: 1;
+        }
+
+        .plug-left-img {
+          left: 0;
+          transform: translateY(-50%) translateX(calc(-100% - 8.003px));
+        }
+        .plug-right-img {
+          right: 0;
+          transform: translateY(-50%) translateX(calc(100% + 8.003px));
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+
+          width: 8.003px;
+          height: 41.615px;
+
+          border: 1.601px solid rgba(255, 255, 255, 0.5);
+
+          background: var(--Theme-Cyan, #00d1ff);
+          z-index: 2;
+        }
+        &::before {
+          left: 0;
+
+          transform: translateY(-50%) translateX(-100%);
+
+          border-radius: 6.402px 1.601px 1.601px 6.402px;
+        }
+        &::after {
+          right: 0;
+          transform: translateY(-50%) translateX(100%);
+
+          border-radius: 1.601px 6.402px 6.402px 1.601px;
+        }
+        .plug {
         }
       }
 
@@ -115,6 +175,8 @@
           padding-top: 19.21px;
           padding-bottom: 19.21px;
 
+          position: relative;
+
           p {
             text-align: left;
           }
@@ -153,6 +215,33 @@
             transform: translateX(-50%) translateY(-50%);
             z-index: -1;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .roadmap-wrapper {
+    padding-left: 34px;
+    padding-right: 34px;
+    .header {
+      font-size: 32px;
+    }
+
+    .main {
+      .left-cat-img,
+      .right-cat-img {
+        display: none;
+      }
+
+      .info {
+        max-width: 90%;
+        min-width: 277.101px;;
+
+        .text-panel {
+          padding: 12.805px 24.009px;
+          font-size: 18.406px;
         }
       }
     }

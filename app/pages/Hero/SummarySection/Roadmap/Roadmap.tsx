@@ -17,6 +17,11 @@ const Roadmap = () => {
     <div className="container-max-width-1920 roadmap-wrapper">
       <div className="header">Roadmap</div>
       <div className="main">
+        <img
+          className="left-cat-img"
+          src="/imgs/summary-section/roadmap-cat-right.png"
+          alt=""
+        />
         <div className="info">
           <div className="text-panel text-panel-check text-panel-icon-end">
             <p>Pre Launch</p>
@@ -38,9 +43,20 @@ const Roadmap = () => {
               />
             </div>
           </div>
-          <div className="text-panel text-panel-progress-bar">
-            <p>Official HashCats Launch</p>
-            <ProgressBar bgcolor="black" completed={35} />
+          <div className="text-panel-progress-bar-wrapper">
+            <div className="text-panel text-panel-progress-bar">
+              <p>Official HashCats Launch</p>
+              <ProgressBar bgcolor="black" completed={35} />
+            </div>
+
+            <img
+              src="/imgs/summary-section/plug-left.svg"
+              className="plug-left-img"
+            />
+            <img
+              src="/imgs/summary-section/plug-right.svg"
+              className="plug-right-img"
+            />
           </div>
 
           <div className="text-panel">
@@ -62,6 +78,11 @@ const Roadmap = () => {
             <p>Listing on Exchanges</p>
           </div>
         </div>
+        <img
+          className="right-cat-img"
+          src="/imgs/summary-section/roadmap-cat-left.png"
+          alt=""
+        />
       </div>
     </div>
   );
