@@ -74,8 +74,8 @@ const InGameSlider: React.FC<InGameSliderProps> = ({
         >
           {items.map(({ imgURL, name, description }, index) => (
             <SwiperSlide key={imgURL + index}>
-              <div className="shop-item-container">
-                <h3>{name}</h3>
+              <h3>{name}</h3>
+              <div className="content">
                 <img src={imgURL} alt={name} />
                 <p>{description}</p>
               </div>
@@ -87,14 +87,14 @@ const InGameSlider: React.FC<InGameSliderProps> = ({
             isBeginning ? "disabled" : ""
           }  prev-${uniqueKey} `}
         >
-          <ChevroletLeftIcon width={44} height={44} />
+          <ChevroletLeftIcon width={35} height={35} />
         </div>
         <div
           className={`custom-swiper-button custom-swiper-button-next ${
             isEnd ? "disabled" : ""
           } next-${uniqueKey}`}
         >
-          <ChevroletRightIcon width={44} height={44} />
+          <ChevroletRightIcon width={35} height={35} />
         </div>
       </div>
     </div>

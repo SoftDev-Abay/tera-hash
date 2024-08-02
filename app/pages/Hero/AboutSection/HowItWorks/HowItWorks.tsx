@@ -59,12 +59,16 @@ const HowItWorks = () => {
 
       <div className="main">
         {/* slider */}
-        <div className="slider">
-          <InGameSlider items={inGameSliderItems.mining} uniqueKey="mining" />
-        </div>
-        <div className="slider">
-          <InGameSlider items={inGameSliderItems.stakes} uniqueKey="staking" />
-        </div>
+        <InGameSlider
+          items={inGameSliderItems.mining}
+          className="slider"
+          uniqueKey="mining"
+        />
+        <InGameSlider
+          items={inGameSliderItems.stakes}
+          className="slider"
+          uniqueKey="staking"
+        />
 
         <div className="info-cards">
           <div className="info-card">
@@ -79,25 +83,44 @@ const HowItWorks = () => {
             </div>
           </div>
           <div className="info-card">
-            <div className="header">Tap</div>
+            <div
+              className="header"
+              style={{
+                marginBottom: "8px",
+              }}
+            >
+              Unite and competes
+            </div>
             <img
               className="card-img"
-              src="/imgs/about-section/stack-of-3-gold-coins.png"
+              src="/imgs/about-section/cat-on-chair.png"
+              style={{
+                marginBottom: "35px",
+              }}
             />
             <div className="card-description">
-              Each tap gets you certain amount of Hashcoins. Boost its
-              efficiency to earn more
+              Invite friends to earn bonuses and compete with them for the top
+              spot on the leaderboard
             </div>
           </div>
           <div className="info-card">
-            <div className="header">Tap</div>
+            <div
+              className="header"
+              style={{
+                marginBottom: "41px",
+              }}
+            >
+              Complete Tasks
+            </div>
             <img
               className="card-img"
-              src="/imgs/about-section/stack-of-3-gold-coins.png"
+              src="/imgs/about-section/industry-awards.png"
+              style={{
+                marginBottom: "32px",
+              }}
             />
             <div className="card-description">
-              Each tap gets you certain amount of Hashcoins. Boost its
-              efficiency to earn more
+              Complete daily and social tasks to earn extra coins
             </div>
           </div>
         </div>

@@ -35,7 +35,11 @@
     .slider {
       grid-column: 1;
       width: 100%; /* Takes remaining width after subtracting info cards width and gap */
-    //   background-color: #f0f0f0; /* Example background, change as needed */
+
+      //   TODO: when adding proper linear gradient as a border, check
+      //   if background-color is a key to solve the issue
+
+      //   background-color: #f0f0f0; 
       min-width: 0;
     }
 
