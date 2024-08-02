@@ -5,7 +5,8 @@ import CallToAction from "./CallToAction/CallToAction";
 
 const SummarySection = () => {
   return (
-    <div className="padding-wrapper container-max-width-1920 summary-section">
+    // <div className="padding-wrapper container-max-width-1920 summary-section">
+    <div className=" container-max-width-1920 summary-section">
       <Tips />
       <Roadmap />
       <CallToAction />
