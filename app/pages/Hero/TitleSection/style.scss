@@ -2,6 +2,7 @@
 
 .title-section {
   min-height: 100vh;
+  max-height: 1100px;
 
   position: relative;
   background-image: url("/imgs/title-section/title-section-bg.png");
@@ -9,7 +10,9 @@
 
   padding-top: 75px;
 
-  overflow: hidden;
+  @media (max-width: 2220px) {
+    overflow: hidden;
+  }
 
   display: flex;
   gap: 50px;
@@ -87,32 +90,10 @@
       justify-content: center;
       gap: 20px;
 
-      .btn {
+      button {
         flex: 1;
-        font-size: 17px;
-        font-weight: 600;
-        line-height: 20.57px;
-        letter-spacing: 0.05em;
-        text-align: center;
-        color: white;
-        text-transform: uppercase;
-        cursor: pointer;
-
-        padding: 24px 32px;
-        background: linear-gradient(16.61deg, #edaa00 42.18%, #fcd532 109.17%);
-
-        border-radius: 16px;
-
-        border: 1px solid;
-
-        border-image-source: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.7) 0%,
-          rgba(255, 255, 255, 0.28) 100%
-        );
-
-        box-shadow: 0px 10px 30px 0px #210f0f66, 0px 5px 0px 0px #de6800,
-          0px 4px 40px 0px #efbb2666;
+        position: relative;
+        z-index: 2;
       }
     }
   }
@@ -129,6 +110,7 @@
     height: 100%;
     .main-img-cat {
       position: relative;
+      overflow: hidden;
 
       width: 100%;
       height: 100%;

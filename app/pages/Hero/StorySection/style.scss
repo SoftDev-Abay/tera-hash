@@ -1,58 +1,58 @@
 @use "../../../../styles/colors.scss" as *;
 
-// <div className="padding-wrapper container-max-width-1920 story-section">
-//       <div className="future">
-//         <img
-//           className="building-img"
-//           src="/imgs/story-section/story-section-buildings.png"
-//         />
-//         <div className="main">
-//           <div className="text-container">
-//             <div className="title">In the purrfect future...</div>
-//             <div className="description">
-//               сats have taken over as the ultimate rulers. These brilliant
-//               engineers and strategic masterminds claw their way to
-//               <span>power by cryptocurrency mining</span>
-//             </div>
-//           </div>
-//           <Board />
-//         </div>
-//       </div>
-//       <div className="mining">
-//         <Board>
-//           <div className="board-content">
-//             <img className="old-computer-img" src="" alt="" />
-//             <img className="arrow-img" src="" alt="" />
-//             <img className="boxes-img" src="" alt="" />
-//           </div>
-//         </Board>
-//         <div className="text-container">
-//           <div className="title"></div>
-//           <div className="description"></div>
-//           <div className="action-button"></div>
-//         </div>
-//       </div>
-//     </div>
-
 .story-section {
   background: rgba(22, 22, 22, 1);
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
 
-  &::before {
-    // content: "";
+  // &::before {
+  //   position: absolute;
+
+  //   width: 100%;
+  //   height: 100%;
+  //   top: -208.35px;
+  //   left: 0px;
+  //   opacity: 0.5;
+  //   // transform: rotate(-106.8deg);
+
+  //   background-image: url("/imgs/story-section/story-section-gradient.png");
+  //   background-size: cover;
+  //   z-index: 2;
+  // }
+
+  // h-720
+
+  .elipsis {
     position: absolute;
+    width: 1409.543px;
+    height: 1405.373px;
+    transform: rotate(-106.798deg);
+  }
 
-    width: 100%;
-    height: 100%;
-    top: -208.35px;
-    left: 0px;
-    opacity: 0.5;
-    // transform: rotate(-106.8deg);
+  .purple-elipsis {
+    top: 0;
+    left: 0;
+    z-index: 1;
 
-    background-image: url("/imgs/story-section/story-section-gradient.png");
-    background-size: cover;
-    z-index: 2;
+    left: -421.194px;
+    top: -229.363px;
+  }
+
+  .azure-elipsis {
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    left: -25.99px;
+    top: -500.43px;
+  }
+  .yellow-elipsis {
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    right: -244.138px;
+    top: 629.364px;
   }
 
   .future {
@@ -68,6 +68,8 @@
 
     .building-img {
       flex-shrink: 1;
+      position: relative;
+      left: -58px;
       //   width: 50%;
     }
 
@@ -100,43 +102,93 @@
   .mining {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     gap: 64px;
 
     .board {
-      flex-grow: 1;
-    //   max-width: 649px;
-      .board-content {
-        
-        height: 100%;
-        // img {
-        //   //   width: 649px;
-        //   //   height: 402px;
-        //   width: 100%;
-        //   height: 100%;
-        // }
-
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      .old-computer-img-wrapper {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 64px;
-        .old-computer-img {
+        flex-direction: column;
+        justify-content: end;
+        position: relative;
+
+        .img-container {
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            min-width: 326px;
+            min-height: 326px;
+            width: 100%;
+            height: 100%;
+
+            background-image: url("/ellipses/light-gray-ellipce.svg");
+            background-size: cover;
+            z-index: 1;
+          }
+        }
+        img {
           max-width: 257px;
           max-height: 257px;
 
           width: 100%;
+
+          position: relative;
+          z-index: 2;
         }
-        .arrow-img {
+      }
+      .arrow-img-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
           max-width: 145px;
           max-height: 145px;
           width: 100%;
         }
-        .boxes-img {
+      }
+      .boxes-img-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        position: relative;
+
+        img {
           max-width: 262px;
           max-height: 262px;
           width: 100%;
+          position: relative;
+          z-index: 2;
+        }
+        .img-container {
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            min-width: 326px;
+            min-height: 326px;
+            width: 100%;
+            height: 100%;
+
+            background-image: url("/ellipses/light-gray-ellipce.svg");
+            background-size: cover;
+            z-index: 1;
+          }
         }
       }
+      // flex-grow: 1;
+      //   max-width: 649px;
     }
 
     .text-container {
@@ -168,6 +220,11 @@
       }
 
       .action-button {
+        margin-bottom: 15px;
+
+        button {
+          max-width: 256px;
+        }
       }
     }
   }

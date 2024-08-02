@@ -1,0 +1,94 @@
+.how-it-works {
+  //   margin-bottom: 85px;
+  .header {
+    margin-bottom: 44px;
+
+    .title {
+      color: #fff;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      margin-bottom: 16px;
+
+      text-align: center;
+    }
+    .subtitle {
+      color: #fff;
+      text-align: center;
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .main {
+    display: grid;
+    grid-template-columns: auto 358px;
+    grid-template-rows: 50% 50%;
+    gap: 24px;
+    column-gap: 28px; /* Gap between sliders and info cards */
+    height: 100%; /* Adjust based on your container or viewport height */
+
+    .slider {
+      grid-column: 1;
+      width: 100%; /* Takes remaining width after subtracting info cards width and gap */
+    //   background-color: #f0f0f0; /* Example background, change as needed */
+      min-width: 0;
+    }
+
+    .info-cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      grid-column: 2;
+      grid-row: 1 / span 2; /* Spans both rows */
+      gap: 24px; /* Gap between info cards */
+
+      .info-card {
+        width: 358px;
+        height: 408px; /* Fixed height as specified */
+
+        padding: 25px 24px 38px 24px;
+        border-radius: 20px;
+        border: 1px solid #fff;
+        border: var(--Gap, 1px) solid var(--, #fff);
+        background: rgba(255, 255, 255, 0.1);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .header {
+          color: #fff;
+          font-family: Inter;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+
+          margin-bottom: 60px;
+        }
+
+        .card-img {
+          //   width: 100%;
+          //   height: 100%;
+          //   object-fit: cover;
+          margin-bottom: 35px;
+        }
+
+        .card-description {
+          color: #fff;
+          text-align: center;
+          font-family: Inter;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}

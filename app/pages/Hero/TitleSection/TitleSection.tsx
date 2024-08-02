@@ -1,14 +1,12 @@
 import React from "react";
-
+import Button from "@/app/components/Button/Button";
 import "./style.scss";
 
 const TitleSection = () => {
   return (
     <div className="title-section">
       <div className="info-container">
-        <p className="action-text">
-          Build your mining empire to become the
-        </p>
+        <p className="action-text">Build your mining empire to become the</p>
         <div className="big-text-img">
           <img src="/imgs/title-section/title-section-big-text.png" alt="" />
         </div>
@@ -18,8 +16,10 @@ const TitleSection = () => {
         </div>
 
         <div className="action-buttons-container">
-          <button className="btn btn-filled">Play for Free</button>
-          <button className="btn">Learn More</button>
+          <Button illuminateShadow styleType="primary">
+            Play for Free
+          </Button>
+          <Button styleType="standart">Learn More</Button>
         </div>
       </div>
       <div className="img-container">

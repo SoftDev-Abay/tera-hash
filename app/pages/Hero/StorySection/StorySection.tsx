@@ -1,10 +1,23 @@
 import React from "react";
 import Board from "@/app/components/Board/Board";
 import "./style.scss";
+import Button from "@/app/components/Button/Button";
 
 const StorySection = () => {
   return (
     <div className="padding-wrapper container-max-width-1920 story-section">
+      {/* <img
+        className="elipsis azure-elipsis"
+        src="/ellipses/azure-ellipse.png"
+      />
+      <img
+        className="elipsis yellow-elipsis"
+        src="/ellipses/yellow-ellipse.png"
+      />
+      <img
+        className="elipsis purple-elipsis"
+        src="/ellipses/purple-ellipse.png"
+      /> */}
       <div className="future">
         <img
           className="building-img"
@@ -26,23 +39,20 @@ const StorySection = () => {
       </div>
       <div className="mining">
         <Board>
-          <div className="board-content">
-            {/* <img src="/imgs/story-section/story-mining.png" alt="" /> */}
-            <img
-              className="old-computer-img"
-              src="/imgs/story-section/old-pc.png"
-              alt=""
-            />
-            <img
-              className="arrow-img"
-              src="/imgs/story-section/3d-arrow.png"
-              alt=""
-            />
-            <img
-              className="boxes-img"
-              src="/imgs/story-section/stacked-boxes.png"
-              alt=""
-            />
+          <div className="old-computer-img-wrapper">
+            <div className="img-container">
+              <img src="/imgs/story-section/old-pc.png" alt="" />
+            </div>
+          </div>
+          <div className="arrow-img-wrapper">
+            <div className="img-container">
+              <img src="/imgs/story-section/3d-arrow.png" alt="" />
+            </div>
+          </div>
+          <div className="boxes-img-wrapper">
+            <div className="img-container">
+              <img src="/imgs/story-section/stacked-boxes.png" alt="" />
+            </div>
           </div>
         </Board>
         <div className="text-container">
@@ -64,7 +74,9 @@ const StorySection = () => {
               <span className="bold-yellow">the HASH KING</span>
             </p>
           </div>
-          <div className="action-button"></div>
+          <div className="action-button">
+            <Button widthFull>start now</Button>
+          </div>
         </div>
       </div>
     </div>

@@ -2,18 +2,34 @@ import React from "react";
 import "./style.scss";
 
 type ButtonProps = {
-  onClick?: () => void;
+  onClick?: Function;
   children: React.ReactNode;
   className?: string;
+  styleType?: "primary" | "standart";
+  illuminateShadow?: boolean;
+  widthFull?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = ({ onClick, children, className, ...rest }: ButtonProps) => {
+const Button = ({
+  onClick,
+  children,
+  className,
+  styleType = "primary",
+  illuminateShadow = false,
+  widthFull = false,
+  type = "button",
+
+  ...rest
+}: ButtonProps) => {
   return (
     <button
-      {...rest}
       onClick={onClick}
-      className={`btn ${className}`}
-      type={rest.type || "button"}
+      type={type}
+      className={`btn type-${styleType} ${
+        illuminateShadow ? "illuminate-shadow" : ""
+      }  ${className || ""}`}
+      {...rest}
+      style={{ width: widthFull ? "100%" : "auto" }}
     >
       {children}
     </button>

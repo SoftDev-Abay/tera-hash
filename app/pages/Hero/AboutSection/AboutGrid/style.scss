@@ -1,0 +1,112 @@
+.about-grid-wrapper {
+  // margin-bottom: 85px;
+
+  margin-bottom: 65px;
+  height: max-content;
+  .header {
+    color: #fff;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-bottom: 71px;
+
+    text-align: center;
+  }
+
+  .about-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20.8px;
+    img {
+      width: 187.2px;
+      height: 187.2px;
+      flex-shrink: 0;
+      margin-bottom: 20.8;
+    }
+
+    .description {
+      max-width: 367px;
+      color: #fff;
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .grid {
+    margin-bottom: 65px;
+
+    .container {
+      width: 100%;
+      margin: 30px auto;
+      position: relative;
+    }
+    .container .row {
+      width: 100%;
+      border-top: 2px solid #aaa;
+      border-bottom: 2px solid #aaa;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .container .row:first-child {
+      border-top: none;
+    }
+    .container .row:last-child {
+      border-bottom: none;
+    }
+    .container .row .item {
+      float: left;
+      width: 33.33%; /* as @passatgt mentioned in the comment, for the older browsers fallback */
+      width: calc(100% / 3);
+
+      // border-left: 2px solid #aaa;
+      // border-right: 2px solid #aaa;
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .container .row .item:first-child {
+      border-left: none;
+    }
+    .container .row .item:last-child {
+      border-right: none;
+    }
+  }
+
+  .background-border::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 46.5%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .background-border-left::before {
+    top: 0;
+    left: 0;
+  }
+
+  .background-border-right::before {
+    top: 0;
+    right: 0;
+  }
+
+  .background-border-bottom::before {
+    bottom: 0;
+    left: 0;
+  }
+}
