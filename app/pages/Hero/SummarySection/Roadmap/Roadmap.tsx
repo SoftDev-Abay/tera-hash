@@ -1,5 +1,16 @@
 import React from "react";
 import "./style.scss";
+import CatPawIcon from "@/app/icons/CatPawIcon";
+import ProgressBar from "@/app/components/ProgressBar/ProgressBar";
+// const ProgressBar = () => {
+//   return (
+//     <div className="progress-bar">
+//       <div className="progress-bar-wrapper">
+//         <div className="progress-bar-inner"></div>
+//       </div>
+//     </div>
+//   );
+// };
 
 const Roadmap = () => {
   return (
@@ -27,6 +38,11 @@ const Roadmap = () => {
               />
             </div>
           </div>
+          <div className="text-panel text-panel-progress-bar">
+            <p>Official HashCats Launch</p>
+            <ProgressBar bgcolor="black" completed={35} />
+          </div>
+
           <div className="text-panel">
             <p>Pre Launch</p>
           </div>
