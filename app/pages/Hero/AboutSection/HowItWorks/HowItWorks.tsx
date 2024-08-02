@@ -12,12 +12,36 @@ const inGameSliderItems = {
       description:
         "Upgrade your mining farm to generate passive income. Check the app regularly to collect your profits.",
     },
+    {
+      name: "Mine2",
+      imgURL: "/imgs/about-section/shop-item-tiny-shop.png",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint tempora ex iste ab veritatis ipsa atque tempore porro, dolorem quas assumenda. Voluptate nisi molestias eveniet.",
+    },
+    {
+      name: "Mine3",
+      imgURL: "/imgs/about-section/shop-item-tiny-shop.png",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint tempora ex iste ab veritatis ipsa atque tempore porro, dolorem quas assumenda. Voluptate nisi molestias eveniet.",
+    },
   ],
   stakes: [
     {
       name: "Stake",
       imgURL: "/imgs/about-section/shop-item-cat.png",
       description: " Stake your funds to level up and earn regular rewards",
+    },
+    {
+      name: "Stake2",
+      imgURL: "/imgs/about-section/shop-item-cat.png",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint tempora ex iste ab veritatis ipsa atque tempore porro, dolorem quas assumenda. Voluptate nisi molestias eveniet.",
+    },
+    {
+      name: "Stake3",
+      imgURL: "/imgs/about-section/shop-item-cat.png",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint tempora ex iste ab veritatis ipsa atque tempore porro, dolorem quas assumenda. Voluptate nisi molestias eveniet.",
     },
   ],
 };
@@ -36,10 +60,10 @@ const HowItWorks = () => {
       <div className="main">
         {/* slider */}
         <div className="slider">
-          <InGameSlider items={inGameSliderItems.mining} />
+          <InGameSlider items={inGameSliderItems.mining} uniqueKey="mining" />
         </div>
         <div className="slider">
-          <InGameSlider items={inGameSliderItems.stakes} />
+          <InGameSlider items={inGameSliderItems.stakes} uniqueKey="staking" />
         </div>
 
         <div className="info-cards">

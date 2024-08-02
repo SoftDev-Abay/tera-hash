@@ -16,11 +16,13 @@ interface Item {
 
 interface InGameSliderProps extends React.HTMLAttributes<HTMLDivElement> {
   items: Item[];
+  uniqueKey: string;
 }
 
 const InGameSlider: React.FC<InGameSliderProps> = ({
   items,
   className,
+  uniqueKey,
   ...rest
 }) => {
   const [isBeginning, setIsBeginning] = useState(true);
@@ -56,6 +58,8 @@ const InGameSlider: React.FC<InGameSliderProps> = ({
     };
   }, []);
 
+  console.log("Swiper uniqueKey", uniqueKey);
+
   return (
     <div className={`${className ? className : ""}  in-game-slider`}>
       <div className="swiper-content-wrapper">
@@ -64,12 +68,12 @@ const InGameSlider: React.FC<InGameSliderProps> = ({
           spaceBetween={20}
           modules={[Navigation]}
           navigation={{
-            nextEl: ".custom-swiper-button-next",
-            prevEl: ".custom-swiper-button-prev",
+            nextEl: `.next-${uniqueKey}`,
+            prevEl: `.prev-${uniqueKey}`,
           }}
         >
-          {items.map(({ imgURL, name, description }) => (
-            <SwiperSlide key={imgURL}>
+          {items.map(({ imgURL, name, description }, index) => (
+            <SwiperSlide key={imgURL + index}>
               <div className="shop-item-container">
                 <h3>{name}</h3>
                 <img src={imgURL} alt={name} />
@@ -81,14 +85,14 @@ const InGameSlider: React.FC<InGameSliderProps> = ({
         <div
           className={`custom-swiper-button custom-swiper-button-prev ${
             isBeginning ? "disabled" : ""
-          }`}
+          }  prev-${uniqueKey} `}
         >
           <ChevroletLeftIcon width={44} height={44} />
         </div>
         <div
           className={`custom-swiper-button custom-swiper-button-next ${
             isEnd ? "disabled" : ""
-          }`}
+          } next-${uniqueKey}`}
         >
           <ChevroletRightIcon width={44} height={44} />
         </div>
