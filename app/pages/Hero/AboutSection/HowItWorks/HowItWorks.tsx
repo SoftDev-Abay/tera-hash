@@ -73,10 +73,22 @@ const HowItWorks = () => {
         <div className="info-cards">
           <div className="info-card">
             <div className="header">Tap</div>
-            <img
-              className="card-img"
-              src="/imgs/about-section/stack-of-3-gold-coins.png"
-            />
+            <div className="card-img-wrapper">
+              <img
+                className="card-img"
+                src="/imgs/about-section/stack-of-3-gold-coins.png"
+              />
+              <img
+                className="gradient-img-center"
+                src="/imgs/about-section/about-section-gradient-orange.png"
+                // w461  h342
+
+                style={{
+                  width: "461px",
+                  height: "342px",
+                }}
+              />
+            </div>
             <div className="card-description">
               Each tap gets you certain amount of Hashcoins. Boost its
               efficiency to earn more
@@ -91,13 +103,27 @@ const HowItWorks = () => {
             >
               Unite and competes
             </div>
-            <img
-              className="card-img"
-              src="/imgs/about-section/cat-on-chair.png"
+            <div
+              className="card-img-wrapper"
               style={{
                 marginBottom: "35px",
               }}
-            />
+            >
+              <img
+                className="card-img"
+                src="/imgs/about-section/cat-on-chair.png"
+              />
+              <img
+                className="gradient-img-center"
+                src="/imgs/about-section/about-section-gradient-azure-green.png"
+                // w461  h342
+
+                style={{
+                  width: "461px",
+                  height: "342px",
+                }}
+              />
+            </div>
             <div className="card-description">
               Invite friends to earn bonuses and compete with them for the top
               spot on the leaderboard
@@ -112,13 +138,28 @@ const HowItWorks = () => {
             >
               Complete Tasks
             </div>
-            <img
-              className="card-img"
-              src="/imgs/about-section/industry-awards.png"
+            <div
+              className="card-img-wrapper"
               style={{
                 marginBottom: "32px",
               }}
-            />
+            >
+              <img
+                className="card-img"
+                src="/imgs/about-section/industry-awards.png"
+              />
+              <img
+                className="gradient-img-center"
+                src="/imgs/about-section/about-section-gradient-azure-purple.png"
+                // w461  h342
+
+                style={{
+                  width: "461px",
+                  height: "342px",
+                }}
+              />
+            </div>
+
             <div className="card-description">
               Complete daily and social tasks to earn extra coins
             </div>
