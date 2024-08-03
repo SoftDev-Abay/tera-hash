@@ -44,8 +44,10 @@ const AboutGridItem = ({
 }: AboutGridItemProps) => {
   return (
     <div {...rest} className={`about-grid-item ${rest.className}`}>
-      <img src={imgURL} alt="about-grid-item" />
-      <div className="description">{description}</div>
+      <div className={`about-grid-item-content`}>
+        <img src={imgURL} alt="about-grid-item" />
+        <div className="description">{description}</div>
+      </div>
     </div>
   );
 };
@@ -56,27 +58,27 @@ const AboutGrid = () => {
       <div className="header">Hashcats is the next unicorn</div>
       <div className="grid">
         <div className="container">
-          <div className="row">
-            {aboutGridItems.slice(0, 3).map((item, index) => (
-              <AboutGridItem
-                key={index}
-                imgURL={item.imgURL}
-                description={item.description}
-                className="item"
-              />
-            ))}
-          </div>
+          <span className="line-divider line-divider-horizontal "></span>
+          <span className="line-divider line-divider-vertical line-divider-vertical-1 "></span>
+          <span className="line-divider line-divider-vertical line-divider-vertical-2 "></span>
 
-          <div className="row">
-            {aboutGridItems.slice(3, 6).map((item, index) => (
-              <AboutGridItem
-                key={index}
-                imgURL={item.imgURL}
-                description={item.description}
-                className="item"
-              />
-            ))}
-          </div>
+          {aboutGridItems.slice(0, 3).map((item, index) => (
+            <AboutGridItem
+              key={index}
+              imgURL={item.imgURL}
+              description={item.description}
+              className="item"
+            />
+          ))}
+
+          {aboutGridItems.slice(3, 6).map((item, index) => (
+            <AboutGridItem
+              key={index}
+              imgURL={item.imgURL}
+              description={item.description}
+              className="item"
+            />
+          ))}
         </div>
       </div>
     </div>
