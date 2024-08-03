@@ -37,8 +37,6 @@
     transform: rotate(-125.932deg);
     left: 26.7%;
     top: 66%;
-
-    
   }
   .bottom-yellow-elipsis {
     transform: rotate(-125.932deg);
@@ -51,6 +49,17 @@
     left: 50.1%;
     top: 67%;
     opacity: 0;
+  }
+
+  .bg-gold-coin {
+    position: absolute;
+    width: 1025.216px;
+    height: 1025.216px;
+    right: 0;
+    top: 26.206%;
+    transform: rotate(-49.677deg) translateX(40%);
+    z-index: 0;
+    opacity: 0.1;
   }
 }
 
