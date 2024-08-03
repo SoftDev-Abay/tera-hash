@@ -2,6 +2,8 @@ import React from "react";
 
 import "./style.scss";
 
+import InfoCardsSlider from "./InfoCardsSlider/InfoCardsSlider";
+
 import InGameSlider from "@/app/components/InGameSlider/InGameSlider";
 
 const inGameSliderItems = {
@@ -46,6 +48,43 @@ const inGameSliderItems = {
   ],
 };
 
+interface InfoCardDesktopProps extends React.HTMLAttributes<HTMLDivElement> {
+  headerStyle: React.CSSProperties;
+  imgWrapperStyle: React.CSSProperties;
+  header: string;
+  cardImg: string;
+  gradientImg: string;
+  cardDescription: string;
+  gradientDimensions: React.CSSProperties;
+}
+
+const InfoCardDesktop = ({
+  header,
+  headerStyle,
+  cardImg,
+  gradientImg,
+  cardDescription,
+  gradientDimensions,
+  imgWrapperStyle,
+}: InfoCardDesktopProps) => {
+  return (
+    <div className="info-card-desktop border-glass-card">
+      <div className="header" style={headerStyle}>
+        {header}
+      </div>
+      <div className="card-img-wrapper" style={imgWrapperStyle}>
+        <img className="card-img" src={cardImg} />
+        <img
+          className="gradient-img-center"
+          src={gradientImg}
+          style={gradientDimensions}
+        />
+      </div>
+      <div className="card-description">{cardDescription}</div>
+    </div>
+  );
+};
+
 const HowItWorks = () => {
   return (
     <div className="padding-wrapper  how-it-works">
@@ -70,101 +109,38 @@ const HowItWorks = () => {
           uniqueKey="staking"
         />
 
-        <div className="info-cards">
-          <div className="info-card border-glass-card">
-            <div className="header">Tap</div>
-            <div className="card-img-wrapper">
-              <img
-                className="card-img"
-                src="/imgs/about-section/stack-of-3-gold-coins.png"
-              />
-              <img
-                className="gradient-img-center"
-                src="/imgs/about-section/about-section-gradient-orange.png"
-                // w461  h342
-
-                style={{
-                  width: "461px",
-                  height: "342px",
-                }}
-              />
-            </div>
-            <div className="card-description">
-              Each tap gets you certain amount of Hashcoins. Boost its
-              efficiency to earn more
-            </div>
-          </div>
-          <div className="info-card border-glass-card">
-            <div
-              className="header"
-              style={{
-                marginBottom: "8px",
-              }}
-            >
-              Unite and competes
-            </div>
-            <div
-              className="card-img-wrapper"
-              style={{
-                marginBottom: "35px",
-              }}
-            >
-              <img
-                className="card-img"
-                src="/imgs/about-section/cat-on-chair.png"
-              />
-              <img
-                className="gradient-img-center"
-                src="/imgs/about-section/about-section-gradient-azure-green.png"
-                // w461  h342
-
-                style={{
-                  width: "461px",
-                  height: "342px",
-                }}
-              />
-            </div>
-            <div className="card-description">
-              Invite friends to earn bonuses and compete with them for the top
-              spot on the leaderboard
-            </div>
-          </div>
-          <div className="info-card border-glass-card">
-            <div
-              className="header"
-              style={{
-                marginBottom: "41px",
-              }}
-            >
-              Complete Tasks
-            </div>
-            <div
-              className="card-img-wrapper"
-              style={{
-                marginBottom: "32px",
-              }}
-            >
-              <img
-                className="card-img"
-                src="/imgs/about-section/industry-awards.png"
-              />
-              <img
-                className="gradient-img-center"
-                src="/imgs/about-section/about-section-gradient-azure-purple.png"
-                // w461  h342
-
-                style={{
-                  width: "461px",
-                  height: "342px",
-                }}
-              />
-            </div>
-
-            <div className="card-description">
-              Complete daily and social tasks to earn extra coins
-            </div>
-          </div>
+        <div className="info-cards-desktop">
+          <InfoCardDesktop
+            header="Tap"
+            headerStyle={{ marginBottom: "41px" }}
+            cardImg="/imgs/about-section/stack-of-3-gold-coins.png"
+            gradientImg="/imgs/about-section/about-section-gradient-orange.png"
+            gradientDimensions={{ width: "461px", height: "342px" }}
+            cardDescription="Each tap gets you certain amount of Hashcoins. Boost its efficiency to earn more"
+            imgWrapperStyle={{}}
+          />
+          <InfoCardDesktop
+            header="Unite and competes"
+            headerStyle={{ marginBottom: "8px" }}
+            imgWrapperStyle={{ marginBottom: "35px" }}
+            cardImg="/imgs/about-section/cat-on-chair.png"
+            gradientImg="/imgs/about-section/about-section-gradient-azure-green.png"
+            gradientDimensions={{ width: "461px", height: "342px" }}
+            cardDescription="Invite friends to earn bonuses and compete with them for the top spot on the leaderboard"
+          />
+          <InfoCardDesktop
+            header="Complete Tasks"
+            headerStyle={{ marginBottom: "41px" }}
+            imgWrapperStyle={{ marginBottom: "32px" }}
+            cardImg="/imgs/about-section/industry-awards.png"
+            gradientImg="/imgs/about-section/about-section-gradient-azure-purple.png"
+            gradientDimensions={{ width: "461px", height: "342px" }}
+            cardDescription="Complete daily and social tasks to earn extra coins"
+          />
         </div>
+      </div>
+      <div className="info-cards-mobile-slider">
+        <InfoCardsSlider />
       </div>
     </div>
   );

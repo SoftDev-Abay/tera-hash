@@ -9,7 +9,7 @@ const AboutSection = () => {
   return (
     <div className="container-max-width-1920 about-section">
       <AboutGrid />
-      {/* <HowItWorks /> */}
+      <HowItWorks />
     </div>
   );
 };

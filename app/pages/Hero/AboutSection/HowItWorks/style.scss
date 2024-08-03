@@ -25,6 +25,10 @@
       line-height: normal;
     }
   }
+
+  .info-cards-mobile-slider {
+    display: none;
+  }
   .main {
     display: grid;
     grid-template-columns: auto 358px;
@@ -44,7 +48,7 @@
       min-width: 0;
     }
 
-    .info-cards {
+    .info-cards-desktop {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -52,7 +56,7 @@
       grid-row: 1 / span 2; /* Spans both rows */
       gap: 24px; /* Gap between info cards */
 
-      .info-card {
+      .info-card-desktop {
         width: 358px;
         height: 408px; /* Fixed height as specified */
 
@@ -100,6 +104,39 @@
           font-weight: 400;
           line-height: normal;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .how-it-works {
+    .header {
+      .title {
+        font-size: 32px;
+      }
+      .subtitle {
+        font-size: 20px;
+      }
+    }
+
+    .info-cards-mobile-slider {
+      display: block;
+      width: 100%;
+    }
+
+    .main {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      gap: 24px;
+
+      .slider {
+        grid-column: 1;
+        width: 100%;
+      }
+
+      .info-cards-desktop {
+        display: none;
       }
     }
   }

@@ -17,12 +17,16 @@ interface Item {
 interface InGameSliderProps extends React.HTMLAttributes<HTMLDivElement> {
   items: Item[];
   uniqueKey: string;
+  imgWidth?: number;
+  imgHeight?: number;
 }
 
 const InGameSlider: React.FC<InGameSliderProps> = ({
   items,
   className,
   uniqueKey,
+  imgWidth,
+  imgHeight,
   ...rest
 }) => {
   const [isBeginning, setIsBeginning] = useState(true);
@@ -76,7 +80,14 @@ const InGameSlider: React.FC<InGameSliderProps> = ({
             <SwiperSlide key={imgURL + index}>
               <h3>{name}</h3>
               <div className="content">
-                <img src={imgURL} alt={name} />
+                <img
+                  src={imgURL}
+                  alt={name}
+                  style={{
+                    width: imgWidth ? `${imgWidth}px` : "auto",
+                    height: imgHeight ? `${imgHeight}px` : "auto",
+                  }}
+                />
                 <p>{description}</p>
               </div>
             </SwiperSlide>
