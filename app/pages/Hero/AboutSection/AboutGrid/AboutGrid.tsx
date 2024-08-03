@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./style.scss";
+import Button from "@/app/components/Button/Button";
 
 const aboutGridItems = [
   {
@@ -53,11 +54,13 @@ const AboutGridItem = ({
 };
 
 const AboutGrid = () => {
+  const [showMore, setShowMore] = useState(false);
+
   return (
-    <div className="about-grid-wrapper">
+    <div className="padding-wrapper  about-grid-wrapper">
       <div className="header">Hashcats is the next unicorn</div>
       <div className="grid">
-        <div className="container">
+        <div className={`container ${showMore ? "expanded" : "closed"}`}>
           <span className="line-divider line-divider-horizontal "></span>
           <span className="line-divider line-divider-vertical line-divider-vertical-1 "></span>
           <span className="line-divider line-divider-vertical line-divider-vertical-2 "></span>
@@ -76,10 +79,15 @@ const AboutGrid = () => {
               key={index}
               imgURL={item.imgURL}
               description={item.description}
-              className="item"
+              className={`item `}
             />
           ))}
         </div>
+      </div>
+      <div className="see-more-button-wrapper">
+        <Button styleType="standart" onClick={() => setShowMore(!showMore)}>
+          See more
+        </Button>
       </div>
     </div>
   );

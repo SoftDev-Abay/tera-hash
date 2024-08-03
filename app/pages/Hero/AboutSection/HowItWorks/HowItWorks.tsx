@@ -48,7 +48,7 @@ const inGameSliderItems = {
 
 const HowItWorks = () => {
   return (
-    <div className="how-it-works">
+    <div className="padding-wrapper  how-it-works">
       <div className="header">
         <div className="title">How it works</div>
         <div className="subtitle">

@@ -7,9 +7,9 @@ import HowItWorks from "./HowItWorks/HowItWorks";
 
 const AboutSection = () => {
   return (
-    <div className="padding-wrapper container-max-width-1920 about-section">
+    <div className="container-max-width-1920 about-section">
       <AboutGrid />
-      <HowItWorks />
+      {/* <HowItWorks /> */}
     </div>
   );
 };
