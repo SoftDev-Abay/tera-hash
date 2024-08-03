@@ -6,9 +6,53 @@
   flex-direction: column;
   gap: 85px;
 
-  // overflow: hidden;
-}
+  position: relative;
 
+  // overflow-x: hidden;
+
+  .elipsis {
+    position: absolute;
+    width: 1409.543px;
+    height: 1405.373px;
+    transform: rotate(174.16deg);
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  .yellow-elipsis {
+    right: 45.6%;
+    top: 20%;
+  }
+
+  .azure-elipsis {
+    right: 13.5%;
+    top: 8%;
+  }
+  .purple-elipsis {
+    left: 12%;
+    top: 17%;
+  }
+
+  .bottom-azure-elipsis {
+    transform: rotate(-125.932deg);
+    left: 26.7%;
+    top: 66%;
+
+    
+  }
+  .bottom-yellow-elipsis {
+    transform: rotate(-125.932deg);
+    left: 37%;
+    top: 67.74%;
+    opacity: 0.9;
+  }
+  .bottom-purple-elipsis {
+    transform: rotate(-125.932deg);
+    left: 50.1%;
+    top: 67%;
+    opacity: 0;
+  }
+}
 
 @media (max-width: 1024px) {
   .about-section {

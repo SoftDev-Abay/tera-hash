@@ -6,11 +6,11 @@ import Button from "@/app/components/Button/Button";
 const StorySection = () => {
   return (
     <div className="padding-wrapper container-max-width-1920 story-section">
-      {/* <img
-        className="elipsis azure-elipsis"
-        src="/ellipses/azure-ellipse.png"
-      />
       <img
+        className="elipsis azure-elipsis"
+        src="/ellipses/story-section-gradient.png"
+      />
+      {/* <img
         className="elipsis yellow-elipsis"
         src="/ellipses/yellow-ellipse.png"
       />
