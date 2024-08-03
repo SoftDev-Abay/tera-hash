@@ -1,4 +1,4 @@
-.info-card-desktop {
+.info-card-mobile {
   width: 100%;
   //   max-width: 400px;
 
@@ -18,14 +18,14 @@
   //   overflow: hidden;
 
   .info-text {
-    .header {
+    .info-text-header {
       color: #fff;
       font-size: 16px;
       font-weight: 700;
       margin-bottom: 8px;
     }
 
-    .description {
+    .info-text-description {
       max-width: 178px;
       color: #fff;
       font-size: 12px;
@@ -33,13 +33,13 @@
     }
   }
 
-  .card-img-wrapper {
+  .info-card-mobile-img-wrapper {
     position: relative;
     //   width: 100%;
     //   height: 100%;
     //   object-fit: cover;
 
-    .card-img {
+    .info-card-mobile-img {
       position: relative;
       z-index: 2;
     }

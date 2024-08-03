@@ -25,9 +25,9 @@ const InfoCardMobile = ({
   imgStyle,
 }: InfoCardMobileProps) => {
   return (
-    <div className="info-card-desktop">
-      <div className="card-img-wrapper">
-        <img className="card-img" src={cardImg} style={imgStyle} />
+    <div className="info-card-mobile">
+      <div className="info-card-mobile-img-wrapper">
+        <img className="info-card-mobile-img" src={cardImg} style={imgStyle} />
         <img
           className="gradient-img-center"
           src={gradientImg}
@@ -35,8 +35,8 @@ const InfoCardMobile = ({
         />
       </div>
       <div className="info-text">
-        <p className="header">{header}</p>
-        <p className="description">{cardDescription}</p>
+        <p className="info-text-header">{header}</p>
+        <p className="info-text-description">{cardDescription}</p>
       </div>
     </div>
   );
@@ -47,11 +47,11 @@ const InfoCardsSlider = () => {
     <Swiper
       spaceBetween={20}
       className="mySwiper"
-      // autoplay={{
-      //   delay: 2500,
-      //   disableOnInteraction: true,
-      // }}
-      // modules={[Autoplay]}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: true,
+      }}
+      modules={[Autoplay]}
     >
       <SwiperSlide>
         <InfoCardMobile

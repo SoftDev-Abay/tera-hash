@@ -60,8 +60,7 @@ const StorySection = () => {
           <div className="description">
             <p className="paragraph1">
               an abandoned mining machine.
-              <br />
-              Now your mission is to{" "}
+              <br /> Now your mission is to{" "}
               <span className="bold-yellow">
                 rise to the top by mastering crypto mining
               </span>

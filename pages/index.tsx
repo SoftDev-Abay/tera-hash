@@ -9,7 +9,7 @@ const About = () => {
     <>
       <Wrapper>
         {/* <TitleSection /> */}
-        {/* <StorySection /> */}
+        <StorySection />
         <AboutSection />
         <SummarySection />
       </Wrapper>
