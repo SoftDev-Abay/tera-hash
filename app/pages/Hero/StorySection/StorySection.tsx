@@ -8,16 +8,16 @@ const StorySection = () => {
     <div className="padding-wrapper container-max-width-1920 story-section">
       <img
         className="elipsis azure-elipsis"
-        src="/ellipses/story-section-gradient.png"
+        src="/ellipses/azure-ellipse.png"
       />
-      {/* <img
+      <img
         className="elipsis yellow-elipsis"
         src="/ellipses/yellow-ellipse.png"
       />
       <img
         className="elipsis purple-elipsis"
         src="/ellipses/purple-ellipse.png"
-      /> */}
+      />
       <div className="future">
         <img
           className="building-img"
