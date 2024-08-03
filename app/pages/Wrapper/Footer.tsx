@@ -6,6 +6,10 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="left">
+        <div className="logo-mobile">
+          <img src="/logo.png" alt="Logo" />
+        </div>
+
         <div className="navigation">
           {navigationLinks.map((link) => (
             <a href={link.link}>{link.name}</a>

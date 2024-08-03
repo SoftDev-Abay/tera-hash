@@ -8,10 +8,10 @@ const About = () => {
   return (
     <>
       <Wrapper>
-        <TitleSection />
-        <StorySection />
+        {/* <TitleSection /> */}
+        {/* <StorySection /> */}
         <AboutSection />
-        <SummarySection />
+        {/* <SummarySection /> */}
       </Wrapper>
     </>
   );

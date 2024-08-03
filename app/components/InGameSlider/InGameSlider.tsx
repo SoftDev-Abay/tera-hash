@@ -61,7 +61,7 @@ const InGameSlider: React.FC<InGameSliderProps> = ({
   console.log("Swiper uniqueKey", uniqueKey);
 
   return (
-    <div className={`${className ? className : ""}  in-game-slider`}>
+    <div className={`${className ? className : ""}  in-game-slider `}>
       <div className="swiper-content-wrapper">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}

@@ -61,17 +61,17 @@ const HowItWorks = () => {
         {/* slider */}
         <InGameSlider
           items={inGameSliderItems.mining}
-          className="slider"
+          className="slider "
           uniqueKey="mining"
         />
         <InGameSlider
           items={inGameSliderItems.stakes}
-          className="slider"
+          className="slider "
           uniqueKey="staking"
         />
 
         <div className="info-cards">
-          <div className="info-card">
+          <div className="info-card border-glass-card">
             <div className="header">Tap</div>
             <div className="card-img-wrapper">
               <img
@@ -94,7 +94,7 @@ const HowItWorks = () => {
               efficiency to earn more
             </div>
           </div>
-          <div className="info-card">
+          <div className="info-card border-glass-card">
             <div
               className="header"
               style={{
@@ -129,7 +129,7 @@ const HowItWorks = () => {
               spot on the leaderboard
             </div>
           </div>
-          <div className="info-card">
+          <div className="info-card border-glass-card">
             <div
               className="header"
               style={{

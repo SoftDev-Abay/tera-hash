@@ -79,6 +79,9 @@ const StorySection = () => {
           </div>
         </div>
       </div>
+      <div className="action-button-bottom">
+        <Button widthFull>start now</Button>
+      </div>
     </div>
   );
 };

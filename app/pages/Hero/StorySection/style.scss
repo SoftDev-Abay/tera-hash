@@ -55,6 +55,10 @@
     top: 629.364px;
   }
 
+  .action-button-bottom {
+    display: none;
+  }
+
   .future {
     position: relative;
     z-index: 1;
@@ -226,6 +230,118 @@
           max-width: 256px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .story-section {
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    .board {
+      min-height: 169.204px;
+      padding: 10px 20px;
+    }
+
+    .future {
+      flex-direction: column;
+      margin-bottom: 41px;
+
+      .building-img {
+        display: none;
+      }
+      .main {
+        max-width: 100%;
+        .text-container {
+          margin-bottom: 20px;
+
+          .title {
+            font-size: 20px;
+            line-height: normal;
+            margin-bottom: 20px;
+          }
+          .description {
+            font-size: 14px;
+
+            padding: 0px 29px 0px 13px;
+
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+    .mining {
+      flex-direction: column-reverse;
+      // justify-content: ;
+      gap: 20px;
+
+      margin-bottom: 21px;
+
+      .board {
+        .old-computer-img-wrapper {
+          .img-container {
+            position: relative;
+            &::before {
+              min-width: 169.204px;
+              min-height: 169.204px;
+            }
+          }
+          img {
+            max-width: 103.354px;
+            max-height: 103.354px;
+          }
+        }
+        .arrow-img-wrapper {
+          img {
+            max-width: 58.313px;
+            max-height: 58.313px;
+          }
+        }
+        .boxes-img-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          position: relative;
+
+          img {
+            max-width: 105.365px;
+            max-height: 105.365px;
+          }
+          .img-container {
+            &::before {
+              min-width: 169.204px;
+              min-height: 169.204px;
+            }
+          }
+        }
+      }
+      .text-container {
+        .title {
+          font-size: 20px;
+          line-height: normal;
+          margin-bottom: 15px;
+        }
+        .description {
+          font-size: 14px;
+          line-height: normal;
+          .paragraph1 {
+            margin-bottom: 15px;
+          }
+          .paragraph2 {
+            margin-bottom: 0px;
+          }
+        }
+
+        .action-button {
+          display: none;
+        }
+      }
+    }
+
+    .action-button-bottom {
+      display: inline-block;
+      width: 100%;
     }
   }
 }

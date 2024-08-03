@@ -57,3 +57,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.border-glass-card {
+  border: 1px solid #fff;
+  // border: rgba(255, 255, 255, 0.9) 1px solid,
+  //   rgba(153, 153, 153, 0.36) 1px solid, rgba(255, 255, 255, 0.9) 1px solid,
+  //   rgba(108, 108, 108, 0.36) 1px solid;
+}

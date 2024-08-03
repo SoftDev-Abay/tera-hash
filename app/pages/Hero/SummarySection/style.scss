@@ -4,7 +4,15 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  margin-bottom: 100px;
+  padding-bottom: 300px;
 
   overflow: hidden;
+}
+
+.call-to-action-wrapper {
+  // padding-left: 22px;
+
+  @media (max-width: 1024px) {
+    padding-left: 10px;
+  }
 }

@@ -1,6 +1,5 @@
 .how-it-works {
   //   margin-bottom: 85px;
-    
 
   .header {
     margin-bottom: 44px;
@@ -59,8 +58,7 @@
 
         padding: 25px 24px 38px 24px;
         border-radius: 20px;
-        border: 1px solid #fff;
-        border: var(--Gap, 1px) solid var(--, #fff);
+        // border: 1px solid #fff;
         background: rgba(255, 255, 255, 0.1);
 
         display: flex;
@@ -87,7 +85,7 @@
           //   object-fit: cover;
           margin-bottom: 35px;
 
-          .card-img{
+          .card-img {
             position: relative;
             z-index: 2;
           }
