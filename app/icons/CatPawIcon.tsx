@@ -1,5 +1,6 @@
 import React from "react";
 import { IconProps } from "../constants/IconTypes";
+
 const CatPawIcon = ({ className = "", width = 68, height = 65 }: IconProps) => {
   return (
     <svg
