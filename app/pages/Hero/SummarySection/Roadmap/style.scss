@@ -224,6 +224,9 @@
 @media (max-width: 1024px) {
   .roadmap-wrapper {
     // overflow: hidden;
+
+    margin-bottom: 54px;
+
     padding-left: 34px;
     padding-right: 34px;
     .header {
@@ -238,7 +241,7 @@
 
       .info {
         max-width: 90%;
-        min-width: 277.101px;;
+        min-width: 277.101px;
 
         .text-panel {
           padding: 12.805px 24.009px;

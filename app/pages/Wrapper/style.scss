@@ -43,6 +43,11 @@
 
       z-index: 10;
 
+
+      @media (max-width: 1024px) {
+        padding: 24px 20px;
+      }
+
       .navigation {
         display: flex;
         gap: 36px;
@@ -78,7 +83,13 @@
     }
 
     .footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 241px 32px 20px 32px;
+
       @media (max-width: 1024px) {
+        padding-top: 27px;
+
         flex-direction: column;
         gap: 48px;
 
@@ -118,11 +129,6 @@
           max-width: 100% !important;
         }
       }
-
-      display: flex;
-      justify-content: space-between;
-      padding: 27px 32px 20px 32px;
-
       .left {
         display: flex;
         flex-direction: column;

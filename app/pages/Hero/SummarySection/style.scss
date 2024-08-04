@@ -4,15 +4,21 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  padding-bottom: 300px;
+  // padding-bottom: 300px;
 
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .call-to-action-wrapper {
   // padding-left: 22px;
+  position: relative;
+
+  transform: translateY(50%);
 
   @media (max-width: 1024px) {
     padding-left: 10px;
+
+    transform: translateY(0%);
+    padding-bottom: 41px;
   }
 }

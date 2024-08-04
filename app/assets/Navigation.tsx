@@ -22,7 +22,7 @@ export const navigationLinks = [
 export const socialIcons = [
   {
     icon: <TelegramCircleIcon width={24} height={24} />,
-    link: "#",
+    link: "https://t.me/hash_cats",
   },
   {
     icon: <YoutubeIcon width={24} height={24} />,

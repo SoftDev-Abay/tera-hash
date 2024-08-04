@@ -35,7 +35,7 @@ const Modal: React.FC<Props> = ({
     setIsRenderedOnServerSide(false);
     setTimeout(() => {
       handleClose();
-    }, 100);
+    }, 200);
   };
 
   if (!isShow) return null;
