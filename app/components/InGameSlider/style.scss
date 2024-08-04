@@ -21,6 +21,45 @@
     position: relative;
     width: 100%;
 
+    h3 {
+      color: #fff;
+      text-align: center;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      margin-bottom: 56px;
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+      img {
+        //   width: 100%;
+        //   height: 100%;
+        // width: 415px;
+        // height: 392px;
+
+        object-fit: cover;
+      }
+      p {
+        max-width: 511px;
+        padding: 0 33px;
+
+        color: #fff;
+        text-align: center;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
     .custom-swiper-button {
       position: absolute;
       top: 50%;
@@ -66,45 +105,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    h3 {
-      color: #fff;
-      text-align: center;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-
-      margin-bottom: 56px;
-    }
-    .content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      gap: 26px;
-      img {
-        //   width: 100%;
-        //   height: 100%;
-        // width: 415px;
-        // height: 392px;
-
-        object-fit: cover;
-      }
-      p {
-        max-width: 511px;
-        padding: 0 33px;
-
-        color: #fff;
-        text-align: center;
-        font-family: Inter;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
-    }
   }
 }
 
@@ -113,6 +113,21 @@
     padding: 16px 0px;
 
     .swiper-content-wrapper {
+      h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+      .content {
+        gap: 9px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+
       .custom-swiper-button {
         width: 35px;
         height: 35px;
@@ -128,20 +143,6 @@
     }
 
     .swiper-slide {
-      h3 {
-        font-size: 16px;
-        margin-bottom: 12px;
-      }
-      .content {
-        gap: 9px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-        p {
-          font-size: 12px;
-        }
-      }
     }
   }
 }

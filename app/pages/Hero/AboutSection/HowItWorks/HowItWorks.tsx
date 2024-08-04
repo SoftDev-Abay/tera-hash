@@ -8,45 +8,25 @@ import InGameSlider from "@/app/components/InGameSlider/InGameSlider";
 import useScreenWidth from "@/app/hooks/useScreenWidth";
 
 const inGameSliderItems = {
-  mining: [
-    {
-      name: "Mine",
-      imgURL: "/imgs/about-section/shop-item-tiny-shop.png",
-      description:
-        "Upgrade your mining farm to generate passive income. Check the app regularly to collect your profits.",
-    },
-    {
-      name: "Mine2",
-      imgURL: "/imgs/about-section/shop-item-tiny-shop.png",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint tempora ex iste ab veritatis ipsa atque tempore porro, dolorem quas assumenda. Voluptate nisi molestias eveniet.",
-    },
-    {
-      name: "Mine3",
-      imgURL: "/imgs/about-section/shop-item-tiny-shop.png",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint tempora ex iste ab veritatis ipsa atque tempore porro, dolorem quas assumenda. Voluptate nisi molestias eveniet.",
-    },
-  ],
-  stakes: [
-    {
-      name: "Stake",
-      imgURL: "/imgs/about-section/shop-item-cat.png",
-      description: " Stake your funds to level up and earn regular rewards",
-    },
-    {
-      name: "Stake2",
-      imgURL: "/imgs/about-section/shop-item-cat.png",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint tempora ex iste ab veritatis ipsa atque tempore porro, dolorem quas assumenda. Voluptate nisi molestias eveniet.",
-    },
-    {
-      name: "Stake3",
-      imgURL: "/imgs/about-section/shop-item-cat.png",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint tempora ex iste ab veritatis ipsa atque tempore porro, dolorem quas assumenda. Voluptate nisi molestias eveniet.",
-    },
-  ],
+  mining: {
+    name: "Mine",
+    imgsURL: [
+      "/imgs/about-section/shop-item-tiny-shop.png",
+      "/imgs/about-section/shop-item-tiny-shop.png",
+      "/imgs/about-section/shop-item-tiny-shop.png",
+    ],
+    description:
+      "Upgrade your mining farm to generate passive income. Check the app regularly to collect your profits.",
+  },
+
+  stakes: {
+    name: "Stake",
+    imgsURL: [
+      "/imgs/about-section/shop-item-cat.png",
+      "/imgs/about-section/shop-item-cat.png",
+    ],
+    description: " Stake your funds to level up and earn regular rewards",
+  },
 };
 
 interface InfoCardDesktopProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -105,14 +85,14 @@ const HowItWorks = () => {
         {/* slider */}
 
         <InGameSlider
-          items={inGameSliderItems.mining}
+          item={inGameSliderItems.mining}
           className="slider "
           uniqueKey="mining"
           imgHeight={isMobile ? "149px" : "auto"}
           imgWidth={isMobile ? "149px" : "auto"}
         />
         <InGameSlider
-          items={inGameSliderItems.stakes}
+          item={inGameSliderItems.stakes}
           className="slider "
           uniqueKey="staking"
           imgHeight={isMobile ? "187.44px" : "auto"}

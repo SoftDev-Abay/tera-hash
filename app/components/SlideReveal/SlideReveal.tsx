@@ -15,15 +15,13 @@ const SlideReveal = ({
   offset = 75,
 }: SlideRevealProps) => {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: false });
-  //   const inView = useInView(ref, { once: true });
+  //   const inView = useInView(ref, { once: false });
+  const inView = useInView(ref, { once: true });
   const mainControls = useAnimation();
 
   useEffect(() => {
     if (inView) {
       mainControls.start("visible");
-    } else {
-      mainControls.start("hidden"); // Optional: animate out when not in view
     }
   }, [inView]);
   return (

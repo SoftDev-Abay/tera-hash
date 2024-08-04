@@ -10,19 +10,19 @@ import { Navigation } from "swiper/modules";
 
 interface Item {
   name: string;
-  imgURL: string;
+  imgsURL: string[];
   description: string;
 }
 
 interface InGameSliderProps extends React.HTMLAttributes<HTMLDivElement> {
-  items: Item[];
+  item: Item;
   uniqueKey: string;
   imgWidth?: string;
   imgHeight?: string;
 }
 
 const InGameSlider: React.FC<InGameSliderProps> = ({
-  items,
+  item: { name, imgsURL, description },
   className,
   uniqueKey,
   imgWidth,
@@ -67,32 +67,34 @@ const InGameSlider: React.FC<InGameSliderProps> = ({
   return (
     <div className={`${className ? className : ""}  in-game-slider `}>
       <div className="swiper-content-wrapper">
-        <Swiper
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-          spaceBetween={20}
-          modules={[Navigation]}
-          navigation={{
-            nextEl: `.next-${uniqueKey}`,
-            prevEl: `.prev-${uniqueKey}`,
-          }}
-        >
-          {items.map(({ imgURL, name, description }, index) => (
-            <SwiperSlide key={imgURL + index}>
-              <h3>{name}</h3>
-              <div className="content">
+        <h3>{name}</h3>
+
+        <div className="content">
+          <Swiper
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+            spaceBetween={20}
+            modules={[Navigation]}
+            navigation={{
+              nextEl: `.next-${uniqueKey}`,
+              prevEl: `.prev-${uniqueKey}`,
+            }}
+          >
+            {imgsURL.map((URL, index) => (
+              <SwiperSlide key={URL + index}>
                 <img
-                  src={imgURL}
-                  alt={name}
+                  src={URL}
+                  alt={URL}
                   style={{
                     width: imgWidth ? `${imgWidth}` : "auto",
                     height: imgHeight ? `${imgHeight}` : "auto",
                   }}
                 />
-                <p>{description}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          <p>{description}</p>
+        </div>
         <div
           className={`custom-swiper-button custom-swiper-button-prev ${
             isBeginning ? "disabled" : ""
