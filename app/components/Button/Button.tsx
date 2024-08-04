@@ -31,7 +31,7 @@ const Button = ({
       {...rest}
       style={{ width: widthFull ? "100%" : "auto" }}
     >
-      <div className="layer"></div>
+      {/* <div className="glass-layer"></div> */}
       {children}
     </button>
   );

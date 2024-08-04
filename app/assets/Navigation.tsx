@@ -7,7 +7,7 @@ import TelegramCircleIcon from "../icons/TelegramCircleIcon";
 export const navigationLinks = [
   {
     name: "About",
-    link: "#",
+    link: "#about",
   },
   {
     name: "How It Works",

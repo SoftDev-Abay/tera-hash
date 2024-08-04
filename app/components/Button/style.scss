@@ -1,5 +1,26 @@
 @use "../../../styles/colors.scss" as c;
 
+// @keyframes glass {
+//   from {
+//     left: -75px;
+//   }
+//   to {
+//     left: 120%;
+//   }
+// }
+
+@keyframes pulseScale {
+  0% {
+    transform: scale(1); // Button at normal size
+  }
+  50% {
+    transform: scale(1.05); // Button enlarges to 105% of its size
+  }
+  100% {
+    transform: scale(1); // Button at normal size
+  }
+}
+
 .btn {
   font-size: 17px;
   font-weight: 600;
@@ -21,61 +42,17 @@
   z-index: 1;
   border: none;
 
-  .layer {
-    display: none;
-  }
+  overflow: hidden;
+
+  display: inline-block; // Ensure transform applies correctly
+  transition: transform 2s ease-in-out; // Smooth transition for scaling
 
   &.type-primary {
     background: linear-gradient(16.61deg, #edaa00 42.18%, #fcd532 109.17%);
 
     box-shadow: 0px 10px 30px 0px #210f0f66, 1px 6px 0px 1px #de6800;
 
-    .layer {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 16px;
-      z-index: -1;
-      background: linear-gradient(16.61deg, #edaa00 42.18%, #fcd532 109.17%);
-    }
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-
-      transform: translate(-50%, -50%);
-      // z-index: 4;
-      z-index: -1;
-      width: calc(100% + $border);
-      height: calc(100% + $border);
-      border-radius: inherit;
-      // background: red;
-
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.7) 0%,
-        rgba(255, 255, 255, 0.28) 100%
-      );
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-
-      transform: translate(-50%, -50%);
-      // z-index: 3;
-      z-index: -2;
-      width: calc(100% + $border);
-      height: calc(100% + $border);
-      border-radius: inherit;
-      background: linear-gradient(16.61deg, #edaa00 42.18%, #fcd532 109.17%);
-    }
+    animation: pulseScale 2s infinite; // Apply the scaling animation
 
     &.illuminate-shadow {
       box-shadow: 0px 4px 40px 0px #efbb2666, 0px 10px 30px 0px #210f0f66,

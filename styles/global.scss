@@ -2,6 +2,10 @@
 
 // if this is present then it deletes spacing for html coming from backend
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -63,4 +67,46 @@ body {
   // border: rgba(255, 255, 255, 0.9) 1px solid,
   //   rgba(153, 153, 153, 0.36) 1px solid, rgba(255, 255, 255, 0.9) 1px solid,
   //   rgba(108, 108, 108, 0.36) 1px solid;
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.float-delay-1s {
+  animation-delay: 1s;
+}
+
+.float-delay-2s {
+  animation-delay: 2s;
+}
+
+.float-delay-3s {
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@media (max-width: 1024px) {
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-10px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
 }

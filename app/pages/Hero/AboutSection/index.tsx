@@ -35,10 +35,7 @@ const AboutSection = () => {
         className="elipsis bottom-purple-elipsis"
         src="/ellipses/purple-ellipse.png"
       />
-      <img
-        className="bg-gold-coin"
-        src="/imgs/title-section/gold-coin.png"
-      />
+      <img className="bg-gold-coin" src="/imgs/title-section/gold-coin.png" />
     </div>
   );
 };

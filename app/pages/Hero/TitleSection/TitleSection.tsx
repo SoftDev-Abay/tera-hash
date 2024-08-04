@@ -44,9 +44,9 @@ const TitleSection = () => {
           alt=""
         /> */}
 
-        <div className="gold-coin-tilted-right"></div>
-        <div className="gold-coin-tilted-left"></div>
-        <div className="gold-coin-blured"></div>
+        <div className="gold-coin-tilted-right float float-delay-2s"></div>
+        <div className="gold-coin-tilted-left float float-delay-1s"></div>
+        <div className="gold-coin-blured float float-delay-3s"></div>
         <div className="gradient"></div>
       </div>
 

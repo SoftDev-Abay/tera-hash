@@ -86,7 +86,7 @@ const AboutGrid = () => {
       </div>
       <div className="see-more-button-wrapper">
         <Button styleType="standart" onClick={() => setShowMore(!showMore)}>
-          See more
+          See {showMore ? "less" : "more"}
         </Button>
       </div>
     </div>

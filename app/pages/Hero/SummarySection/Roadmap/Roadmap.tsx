@@ -1,20 +1,61 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./style.scss";
 import CatPawIcon from "@/app/icons/CatPawIcon";
 import ProgressBar from "@/app/components/ProgressBar/ProgressBar";
-// const ProgressBar = () => {
-//   return (
-//     <div className="progress-bar">
-//       <div className="progress-bar-wrapper">
-//         <div className="progress-bar-inner"></div>
-//       </div>
-//     </div>
-//   );
-// };
+
+import { motion, useInView, useAnimation } from "framer-motion";
+
+interface RevealProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+  delay?: number;
+  duration?: number;
+  started?: boolean;
+}
+
+const Reveal = ({
+  children,
+  delay = 0.25,
+  duration = 0.5,
+  started,
+}: RevealProps) => {
+  const ref = useRef(null);
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (started) {
+      mainControls.start("visible");
+    }
+  }, [started]);
+
+  return (
+    <div ref={ref} style={{ position: "relative", zIndex: 100 }}>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, x: -20 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ delay, duration }}
+      >
+        {children}
+      </motion.div>
+    </div>
+  );
+};
 
 const Roadmap = () => {
+  const initialDelay = 0.25;
+
+  const calculateDelay = (index: number) => {
+    return initialDelay + index * 0.25;
+  };
+
+  const firstItemRef = useRef(null);
+  const inView = useInView(firstItemRef, { once: false });
+
   return (
-    <div className="container-max-width-1920 roadmap-wrapper">
+    <div className="container-max-width-1920 roadmap-wrapper" id="roadmap">
       <div className="header">Roadmap</div>
       <div className="main">
         <img
@@ -24,7 +65,9 @@ const Roadmap = () => {
         />
         <div className="info">
           <div className="text-panel text-panel-check text-panel-icon-end">
-            <p>Pre Launch</p>
+            <Reveal started={inView} delay={calculateDelay(0)}>
+              <p ref={firstItemRef}>Pre Launch</p>
+            </Reveal>
             <div className="icon-img-wrapper check-icon-img-wrapper">
               <img
                 src="/imgs/summary-section/blue-check-mark.png"
@@ -34,7 +77,9 @@ const Roadmap = () => {
             </div>
           </div>
           <div className="text-panel text-panel-check text-panel-icon-end">
-            <p>1,000,000 Users</p>
+            <Reveal started={inView} delay={calculateDelay(1)}>
+              <p>1,000,000 Users</p>
+            </Reveal>
             <div className="icon-img-wrapper check-icon-img-wrapper">
               <img
                 src="/imgs/summary-section/blue-check-mark.png"
@@ -45,7 +90,9 @@ const Roadmap = () => {
           </div>
           <div className="text-panel-progress-bar-wrapper">
             <div className="text-panel text-panel-progress-bar">
-              <p>Official HashCats Launch</p>
+              <Reveal started={inView} delay={calculateDelay(2)}>
+                <p>Official HashCats Launch</p>
+              </Reveal>
               <ProgressBar bgcolor="black" completed={35} />
             </div>
 
@@ -58,13 +105,16 @@ const Roadmap = () => {
               className="plug-right-img"
             />
           </div>
-          
 
           <div className="text-panel">
-            <p>Pre Launch</p>
+            <Reveal started={inView} delay={calculateDelay(3)}>
+              <p>Shop Opening</p>
+            </Reveal>
           </div>
           <div className="text-panel">
-            <p>Shop Opening</p>
+            <Reveal started={inView} delay={calculateDelay(4)}>
+              <p>Exchange Negotiations</p>
+            </Reveal>
           </div>
           <div className="text-panel text-panel-icon-start text-panel-ruby">
             <img
@@ -73,10 +123,14 @@ const Roadmap = () => {
               src="/imgs/summary-section/ruby-crystal-coin.png"
               className="check-icon"
             />
-            <p>Exchange Negotiations</p>
+            <Reveal started={inView} delay={calculateDelay(5)}>
+              <p>Airdrop</p>
+            </Reveal>
           </div>
           <div className="text-panel">
-            <p>Listing on Exchanges</p>
+            <Reveal started={inView} delay={calculateDelay(6)}>
+              <p>Listing on Exchanges</p>
+            </Reveal>
           </div>
         </div>
         <img

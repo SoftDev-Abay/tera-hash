@@ -211,6 +211,9 @@
           padding-top: 3px;
           padding-bottom: 3px;
 
+          //  line height lower for smaller screens
+          line-height: normal;
+
           .paragraph1 {
             margin-bottom: 15px;
           }

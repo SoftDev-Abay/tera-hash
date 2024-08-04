@@ -92,7 +92,7 @@ const HowItWorks = () => {
   const isMobile = screenWidth < 1024;
 
   return (
-    <div className="padding-wrapper  how-it-works">
+    <div className="padding-wrapper  how-it-works" id="how-it-works">
       <div className="header">
         <div className="title">How it works?</div>
         <div className="subtitle">

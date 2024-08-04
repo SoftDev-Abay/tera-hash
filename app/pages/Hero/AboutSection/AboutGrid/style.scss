@@ -173,7 +173,7 @@
 
         flex-direction: row;
         justify-content: start;
-        align-items: normal;
+        align-items: center;
         gap: 25px;
       }
 
@@ -184,7 +184,7 @@
       }
 
       .description {
-        padding-top: 10px;
+        padding-bottom: 10px;
         font-size: 14px;
         font-weight: 400;
         text-align: left;

@@ -2,10 +2,13 @@ import React from "react";
 import Board from "@/app/components/Board/Board";
 import "./style.scss";
 import Button from "@/app/components/Button/Button";
-
+import SlideReveal from "@/app/components/SlideReveal/SlideReveal";
 const StorySection = () => {
   return (
-    <div className="padding-wrapper container-max-width-1920 story-section">
+    <div
+      className="padding-wrapper container-max-width-1920 story-section"
+      id="about"
+    >
       <img
         className="elipsis azure-elipsis"
         src="/ellipses/azure-ellipse.png"
@@ -26,13 +29,16 @@ const StorySection = () => {
         <div className="main">
           <div className="text-container">
             <div className="title">In the purrfect future...</div>
-            <div className="description">
-              сats have taken over as the ultimate rulers. These brilliant
-              engineers and strategic masterminds claw their way to{" "}
-              <span className="bold-yellow">
-                power by cryptocurrency mining
-              </span>
-            </div>
+
+            <SlideReveal>
+              <div className="description">
+                сats have taken over as the ultimate rulers. These brilliant
+                engineers and strategic masterminds claw their way to{" "}
+                <span className="bold-yellow">
+                  power by cryptocurrency mining
+                </span>
+              </div>
+            </SlideReveal>
           </div>
           <video width="100%" height="100%" autoPlay muted loop playsInline>
             <source src="/videos/hash-cats-video.mp4" type="video/mp4" />
@@ -60,20 +66,24 @@ const StorySection = () => {
         <div className="text-container">
           <div className="title">You’ve discovered...</div>
           <div className="description">
-            <p className="paragraph1">
-              an abandoned mining machine.
-              <br /> Now your mission is to{" "}
-              <span className="bold-yellow">
-                rise to the top by mastering crypto mining
-              </span>
-            </p>
+            <SlideReveal delay={0.25}>
+              <p className="paragraph1">
+                an abandoned mining machine.
+                <br /> Now your mission is to{" "}
+                <span className="bold-yellow">
+                  rise to the top by mastering crypto mining
+                </span>
+              </p>
+            </SlideReveal>
 
-            <p className="paragraph2">
-              Upgrade your equipment,
-              <br /> expand your empire and become
-              <br />
-              <span className="bold-yellow">the HASH KING</span>
-            </p>
+            <SlideReveal delay={0.5}>
+              <p className="paragraph2">
+                Upgrade your equipment,
+                <br /> expand your empire and become
+                <br />
+                <span className="bold-yellow">the HASH KING</span>
+              </p>
+            </SlideReveal>
           </div>
           <div className="action-button">
             <Button widthFull>start now</Button>
