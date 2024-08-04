@@ -5,6 +5,7 @@ import "./style.scss";
 import InfoCardsSlider from "./InfoCardsSlider/InfoCardsSlider";
 
 import InGameSlider from "@/app/components/InGameSlider/InGameSlider";
+import useScreenWidth from "@/app/hooks/useScreenWidth";
 
 const inGameSliderItems = {
   mining: [
@@ -86,6 +87,10 @@ const InfoCardDesktop = ({
 };
 
 const HowItWorks = () => {
+  const screenWidth = useScreenWidth();
+
+  const isMobile = screenWidth < 1024;
+
   return (
     <div className="padding-wrapper  how-it-works">
       <div className="header">
@@ -98,15 +103,20 @@ const HowItWorks = () => {
 
       <div className="main">
         {/* slider */}
+
         <InGameSlider
           items={inGameSliderItems.mining}
           className="slider "
           uniqueKey="mining"
+          imgHeight={isMobile ? "149px" : "auto"}
+          imgWidth={isMobile ? "149px" : "auto"}
         />
         <InGameSlider
           items={inGameSliderItems.stakes}
           className="slider "
           uniqueKey="staking"
+          imgHeight={isMobile ? "187.44px" : "auto"}
+          imgWidth={isMobile ? "187.44px" : "auto"}
         />
 
         <div className="info-cards-desktop">
@@ -139,9 +149,11 @@ const HowItWorks = () => {
           />
         </div>
       </div>
-      <div className="info-cards-mobile-slider">
-        <InfoCardsSlider />
-      </div>
+      {isMobile ? (
+        <div className="info-cards-mobile-slider">
+          <InfoCardsSlider />
+        </div>
+      ) : null}
     </div>
   );
 };

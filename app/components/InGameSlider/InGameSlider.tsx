@@ -17,8 +17,8 @@ interface Item {
 interface InGameSliderProps extends React.HTMLAttributes<HTMLDivElement> {
   items: Item[];
   uniqueKey: string;
-  imgWidth?: number;
-  imgHeight?: number;
+  imgWidth?: string;
+  imgHeight?: string;
 }
 
 const InGameSlider: React.FC<InGameSliderProps> = ({
@@ -84,8 +84,8 @@ const InGameSlider: React.FC<InGameSliderProps> = ({
                   src={imgURL}
                   alt={name}
                   style={{
-                    width: imgWidth ? `${imgWidth}px` : "auto",
-                    height: imgHeight ? `${imgHeight}px` : "auto",
+                    width: imgWidth ? `${imgWidth}` : "auto",
+                    height: imgHeight ? `${imgHeight}` : "auto",
                   }}
                 />
                 <p>{description}</p>
