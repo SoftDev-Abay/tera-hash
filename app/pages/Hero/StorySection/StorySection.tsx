@@ -34,7 +34,9 @@ const StorySection = () => {
               </span>
             </div>
           </div>
-          <Board />
+          <video width="100%" height="100%" autoPlay muted loop playsInline>
+            <source src="/videos/hash-cats-video.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
       <div className="mining">

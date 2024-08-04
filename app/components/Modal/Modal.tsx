@@ -26,54 +26,49 @@ const Modal: React.FC<Props> = ({
   const [isRenderedOnServerSide, setIsRenderedOnServerSide] =
     useState<boolean>(false);
   useEffect(() => {
-    setIsRenderedOnServerSide(true);
-  }, []);
+    if (isShow) {
+      setIsRenderedOnServerSide(true);
+    }
+  }, [isShow]);
 
-  if (!isRenderedOnServerSide) return null;
+  const closeModal = () => {
+    setIsRenderedOnServerSide(false);
+    setTimeout(() => {
+      handleClose();
+    }, 500);
+  };
+
+  if (!isShow) return null;
+
   return createPortal(
-    <>
-      {isShow ? (
-        <div className={classNames(styles.modal, { "d-none": !isShow })}>
-          <div
-            style={maxWidth ? { maxWidth: maxWidth, width: "100%" } : {}}
-            className={styles.modalContainer}
-          >
-            <div>
-              <div className={styles.modalTop}>
-                <div
-                  style={
-                    display ? { display: display } : { display: "inline-block" }
-                  }
-                  className={styles.modalControls}
-                  onClick={() => handleClose()}
-                >
-                  <CloseIcon />
-                </div>
-              </div>
-              <div className={styles.modalMain}>{children}</div>
-            </div>
+    <div
+      className={`${styles.modal} ${
+        isRenderedOnServerSide ? styles.active : ""
+      }`}
+    >
+      <div
+        style={maxWidth ? { maxWidth: maxWidth, width: "100%" } : {}}
+        className={styles.modalContainer}
+      >
+        <div>
+          <div className={styles.modalTop}>
+            <img
+              className={styles.modalLogo}
+              src="/logo.png"
+              alt="Logo"
+              width="100"
+              height="68"
+            />
 
-            <div className={styles.modalBottom}>
-              <div className={styles.modalBottomLinksContainer}>
-                <a href="https://www.facebook.com/" target="_blank">
-                  <FacebookIcon width={24} height={24} />
-                </a>
-                <a href="https://www.instagram.com/" target="_blank">
-                  <InstagramIcon width={24} height={24} />
-                </a>
-              </div>
-
-              <p className={styles.modalBottomCopyright}>
-                © Eurasia Group 2022
-              </p>
+            <div className={styles.modalControls} onClick={() => closeModal()}>
+              <CloseIcon width={18} height={18} />
             </div>
           </div>
-          <Backdrop onClick={handleClose} transparent={true} />
+          <div className={styles.modalMain}>{children}</div>
         </div>
-      ) : (
-        <></>
-      )}
-    </>,
+      </div>
+      <Backdrop onClick={closeModal} transparent={true} />
+    </div>,
     document.getElementById("modal-root")!!
   );
 };

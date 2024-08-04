@@ -58,6 +58,7 @@ const Roadmap = () => {
               className="plug-right-img"
             />
           </div>
+          
 
           <div className="text-panel">
             <p>Pre Launch</p>

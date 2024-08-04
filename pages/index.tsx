@@ -8,7 +8,7 @@ const About = () => {
   return (
     <>
       <Wrapper>
-        {/* <TitleSection /> */}
+        <TitleSection />
         <StorySection />
         <AboutSection />
         <SummarySection />

@@ -5,31 +5,27 @@ import { IconProps } from "../constants/IconTypes";
 const CloseIcon = ({ className = "", width = 32, height = 32 }: IconProps) => {
   return (
     <svg
+      xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
-      viewBox="0 0 32 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
       className={className}
+      viewBox="0 0 18 19"
+      fill="none"
     >
-      <mask
-        id="mask0_309_415"
-        // style="mask-type:alpha"
-        maskUnits="userSpaceOnUse"
-        x="0"
-        y="0"
-        width="32"
-        height="32"
-      >
-        <rect width="32" height="32" fill="#D9D9D9" />
-      </mask>
-      <g mask="url(#mask0_309_415)">
-        <path
-          d="M8.85738 25.6667L7 23.8L14.4295 16.3333L7 8.86667L8.85738 7L16.2869 14.4667L23.7164 7L25.5738 8.86667L18.1443 16.3333L25.5738 23.8L23.7164 25.6667L16.2869 18.2L8.85738 25.6667Z"
-          fill="#333333"
-          fillOpacity="0.54"
-        />
-      </g>
+      <path
+        d="M12.7124 5.7876L5.28778 13.2122"
+        stroke="#171717"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M12.7124 13.2122L5.28778 5.78754"
+        stroke="#171717"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
     </svg>
   );
 };

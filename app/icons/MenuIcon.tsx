@@ -5,15 +5,30 @@ import { IconProps } from "../constants/IconTypes";
 const MenuIcon = ({ className = "", width = 46, height = 28 }: IconProps) => {
   return (
     <svg
+      xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
-      viewBox="0 0 46 28"
+      viewBox="0 0 22 20"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
     >
-      <rect x="8" y="8" width="30" height="2" fill="#333333" />
-      <rect x="8" y="18" width="30" height="2" fill="#333333" />
+      <path
+        d="M1 3.75H21"
+        stroke="white"
+        stroke-width="1.25"
+        stroke-linecap="round"
+      />
+      <path
+        d="M1 10H21"
+        stroke="white"
+        stroke-width="1.25"
+        stroke-linecap="round"
+      />
+      <path
+        d="M1 16.25H21"
+        stroke="white"
+        stroke-width="1.25"
+        stroke-linecap="round"
+      />
     </svg>
   );
 };

@@ -36,67 +36,6 @@ const CatPawIcon = ({ className = "", width = 68, height = 65 }: IconProps) => {
           fill="white"
         />
       </g>
-      <defs>
-        <filter
-          id="filter0_dd_753_1760"
-          x="0.800137"
-          y="0.581142"
-          width="66.932"
-          height="63.5863"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
-        >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feMorphology
-            radius="4.80172"
-            operator="dilate"
-            in="SourceAlpha"
-            result="effect1_dropShadow_753_1760"
-          />
-          <feOffset />
-          <feGaussianBlur stdDeviation="7.36264" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0.82 0 0 0 0 1 0 0 0 1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_753_1760"
-          />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="6.4023" />
-          <feGaussianBlur stdDeviation="3.20115" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow_753_1760"
-            result="effect2_dropShadow_753_1760"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow_753_1760"
-            result="shape"
-          />
-        </filter>
-      </defs>
     </svg>
   );
 };
