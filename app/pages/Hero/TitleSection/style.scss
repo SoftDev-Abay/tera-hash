@@ -177,6 +177,7 @@
     max-height: max-content;
 
     .info-container {
+      margin: 0 auto;
       padding: 119px 20px 0px 20px;
       width: 100%;
       max-width: max-content;
@@ -200,6 +201,7 @@
 
       .big-text-img {
         margin-bottom: 10px;
+        max-width: 361px;
 
         img {
           width: 100%;
@@ -269,11 +271,13 @@
 
     .action-buttons-container-bottom {
       padding: 0px 20px;
+      // margin: 0 auto;
       position: relative;
       top: -3px;
       display: flex;
       flex-direction: column;
       gap: 20px;
+      // max-width: 450px;
     }
   }
 }
