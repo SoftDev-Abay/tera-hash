@@ -42,7 +42,7 @@
     align-items: center;
 
     max-width: 800px;
-    padding: 100px 0px 0px 100px;
+    padding: 70px 0px 0px 100px;
 
     .action-text {
       font-size: 28px;
@@ -179,6 +179,15 @@
       width: 629px;
       height: 827px;
       z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .title-section {
+    gap: 20px;
+    .info-container {
+      padding-left: 50px;
     }
   }
 }
