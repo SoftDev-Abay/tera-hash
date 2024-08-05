@@ -89,15 +89,15 @@ const HowItWorks = () => {
           item={inGameSliderItems.mining}
           className="slider "
           uniqueKey="mining"
-          imgHeight={isMobile ? "149px" : "auto"}
-          imgWidth={isMobile ? "149px" : "auto"}
+          imgHeight={isMobile ? "149px" : "392px"}
+          imgWidth={isMobile ? "149px" : "415px"}
         />
         <InGameSlider
           item={inGameSliderItems.stakes}
           className="slider "
           uniqueKey="staking"
-          imgHeight={isMobile ? "187.44px" : "auto"}
-          imgWidth={isMobile ? "187.44px" : "auto"}
+          imgHeight={isMobile ? "230.44px" : "557px"}
+          imgWidth={isMobile ? "200.44px" : "457px"}
         />
 
         <div className="info-cards-desktop">

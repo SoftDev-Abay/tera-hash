@@ -4,7 +4,7 @@ import "./style.scss";
 
 const TitleSection = () => {
   return (
-    <div className="title-section">
+    <div className="container-max-width-1920 title-section">
       <div className="info-container">
         <p className="action-text">Build your mining empire to become the</p>
         <div className="big-text-img">
