@@ -15,6 +15,7 @@ const TitleSection = () => {
             alt=""
             width={600}
             height={600}
+            loading="eager"
           />
         </div>
         <div className="addition-text">
@@ -40,6 +41,7 @@ const TitleSection = () => {
           alt=""
           width={500}
           height={500}
+          loading="eager"
           // fill
         />
         {/* <img
