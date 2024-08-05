@@ -37,18 +37,24 @@ const TitleSection = () => {
       <div className="img-container">
         <Image
           className="main-img-cat"
-          src="/imgs/title-section/title-section-cat-cut.png"
+          src="/imgs/title-section/title-section-cat-high.png"
           alt=""
           width={500}
           height={500}
           loading="eager"
           // fill
         />
-        {/* <img
+
+        {/* <Image
           className="main-img-cat"
-          src="/imgs/title-section/title-section-cat-cut-slim.png"
+          src="/imgs/title-section/title-section-cat-cut.png"
           alt=""
+          width={500}
+          height={500}
+          loading="eager"
+          // fill
         /> */}
+
 
         <div className="gold-coin-tilted-right float float-delay-2s"></div>
         <div className="gold-coin-tilted-left float float-delay-1s"></div>
