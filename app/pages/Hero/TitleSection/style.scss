@@ -13,6 +13,7 @@
   padding-top: 75px;
 
   display: flex;
+  align-items: center;
   gap: 50px;
 
   .action-buttons-container-bottom {
@@ -20,6 +21,7 @@
   }
 
   .info-container {
+    flex-shrink: 1;
     position: relative;
     z-index: 2;
 
@@ -28,8 +30,7 @@
     align-items: center;
 
     max-width: 800px;
-    margin: auto 0;
-    padding: 100px 100px;
+    padding: 100px 0px 0px 100px;
 
     .action-text {
       font-size: 28px;
@@ -90,6 +91,7 @@
       display: flex;
       justify-content: center;
       gap: 20px;
+      // flex-wrap: wrap;
 
       button {
         flex: 1;
@@ -101,11 +103,12 @@
 
   .img-container {
     flex-grow: 1;
+    min-width: 50%;
     z-index: 1;
-    position: absolute;
+    position: relative;
     right: -30px;
-    top: 75px;
-    height: calc(100% - 75px);
+    // top: 75px;
+    height: calc(100%);
 
     .main-img-cat {
       position: relative;
@@ -129,6 +132,7 @@
 
     .gold-coin-tilted-right {
       position: absolute;
+
       width: 261.11px;
       height: 261.11px;
       top: 41.5%;
@@ -168,6 +172,123 @@
 }
 
 @media (max-width: 1024px) {
+  .title-section {
+    padding-top: 0;
+    padding-bottom: 44px;
+    flex-direction: column;
+    gap: 0;
+
+    height: auto;
+    max-height: max-content;
+
+    .info-container {
+      margin: 0 auto;
+      padding: 119px 20px 0px 20px;
+      width: 100%;
+      max-width: max-content;
+
+      .action-text {
+        text-align: center;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        letter-spacing: 0.16px;
+        background: linear-gradient(180deg, #fff 0%, #bedcff 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        max-width: 370px;
+
+        margin-bottom: 5px;
+      }
+
+      .big-text-img {
+        margin-bottom: 10px;
+        max-width: 501px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        &::before {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .addition-text {
+        max-width: 317px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 0px;
+      }
+
+      .action-buttons-container {
+        display: none;
+      }
+    }
+
+    .img-container {
+      position: relative;
+      right: 0;
+      top: 0;
+      width: 80%;
+      // height: ;
+      height: auto;
+      // padding: 0px 30px;
+
+      .main-img-cat {
+        width: 100%;
+        height: auto;
+      }
+
+      .gold-coin-tilted-left {
+        width:133.76px;
+        height: 133.76px;
+        top: 60%;
+        left: 13%;
+      }
+
+      .gold-coin-tilted-right {
+        width: 170.5px;
+        height: 170.5px;
+        top: 40%;
+        right: 10%;
+      }
+
+      .gold-coin-blured {
+        width: 150.73px;
+        height: 150.67px;
+        top: 20%;
+        left: 7%;
+      }
+
+      .gradient {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .action-buttons-container-bottom {
+      width: 100%;
+      padding: 0px 20px;
+      // margin: 0 auto;
+      position: relative;
+      top: -3px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      // max-width: 450px;
+    }
+  }
+}
+
+
+@media (max-width:450px){
   .title-section {
     padding-top: 0;
     padding-bottom: 44px;
@@ -271,6 +392,7 @@
     }
 
     .action-buttons-container-bottom {
+      width: 100%;
       padding: 0px 20px;
       // margin: 0 auto;
       position: relative;
