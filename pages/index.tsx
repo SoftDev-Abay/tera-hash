@@ -1,18 +1,29 @@
 import React, { Suspense } from "react";
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
+import dynamic from "next/dynamic";
+import Head from "next/head";
 import Wrapper from "@/app/pages/Wrapper/Wrapper";
 
-const TitleSection = dynamic(() => import("@/app/pages/Hero/TitleSection/TitleSection"), { ssr: true });
-const StorySection = dynamic(() => import("@/app/pages/Hero/StorySection/StorySection"), { ssr: false });
-const AboutSection = dynamic(() => import("@/app/pages/Hero/AboutSection"), { ssr: false });
-const SummarySection = dynamic(() => import("@/app/pages/Hero/SummarySection"), { ssr: false });
+const TitleSection = dynamic(
+  () => import("@/app/pages/Hero/TitleSection/TitleSection"),
+  { ssr: true }
+);
+const StorySection = dynamic(
+  () => import("@/app/pages/Hero/StorySection/StorySection"),
+  { ssr: false }
+);
+const AboutSection = dynamic(() => import("@/app/pages/Hero/AboutSection"), {
+  ssr: false,
+});
+const SummarySection = dynamic(
+  () => import("@/app/pages/Hero/SummarySection"),
+  { ssr: false }
+);
 
 const Home = () => {
   return (
     <Wrapper>
       <Head>
-        <title>Your Site Title</title>
+        <title>HashCats</title>
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <TitleSection />
