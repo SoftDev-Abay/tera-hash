@@ -1,8 +1,9 @@
 import "./style.scss";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-
+import dynamic from 'next/dynamic';
 import { FC, ReactNode } from "react";
+
+const Navbar = dynamic(() => import("./Navbar"), { ssr: false });
+const Footer = dynamic(() => import("./Footer"), { ssr: false });
 
 const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
   return (
