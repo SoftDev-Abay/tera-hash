@@ -18,6 +18,8 @@ const Reveal = ({
   delay = 0.25,
   duration = 0.5,
   started,
+  style,
+  ...props
 }: RevealProps) => {
   const ref = useRef(null);
   const mainControls = useAnimation();
@@ -29,7 +31,7 @@ const Reveal = ({
   }, [started]);
 
   return (
-    <div ref={ref} style={{ position: "relative", zIndex: 100 }}>
+    <div ref={ref} style={{ position: "relative", zIndex: 100 }} {...props}>
       <motion.div
         variants={{
           hidden: { opacity: 0, x: -20 },
@@ -38,6 +40,7 @@ const Reveal = ({
         initial="hidden"
         animate={mainControls}
         transition={{ delay, duration }}
+        style={style}
       >
         {children}
       </motion.div>
@@ -128,14 +131,18 @@ const Roadmap = () => {
             </Reveal>
           </div>
           <div className="text-panel text-panel-icon-start text-panel-ruby">
-            <Image
-              width={26}
-              height={26}
-              alt=""
-              src="/imgs/summary-section/ruby-crystal-coin.png"
-              className="check-icon"
-            />
-            <Reveal started={inView} delay={calculateDelay(5)}>
+            <Reveal
+              started={inView}
+              delay={calculateDelay(5)}
+              style={{ display: "flex", alignItems: "center", gap:"6.4px" }}
+            >
+              <Image
+                width={26}
+                height={26}
+                alt=""
+                src="/imgs/summary-section/ruby-crystal-coin.png"
+                className="check-icon"
+              />
               <p>Airdrop</p>
             </Reveal>
           </div>
