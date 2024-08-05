@@ -8,11 +8,13 @@ import "./style.scss";
 const SummarySection = () => {
   return (
     // <div className="padding-wrapper container-max-width-1920 summary-section">
-    <div className=" container-max-width-1920 summary-section">
-      <Tips />
-      <Roadmap />
-      <div className="call-to-action-wrapper">
-        <CallToAction />
+    <div className="summary-section-wrapper">
+      <div className=" container-max-width-1920 summary-section">
+        <Tips />
+        <Roadmap />
+        <div className="call-to-action-wrapper">
+          <CallToAction />
+        </div>
       </div>
     </div>
   );
