@@ -1,5 +1,14 @@
 @use "../../../styles/colors.scss" as *;
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .in-game-slider {
   border-radius: 20px;
   border: 1px solid #fff;
@@ -16,6 +25,34 @@
   padding: 27px 0px 35px 0px;
 
   position: relative;
+
+  // &::before,
+  // &::after {
+  //   $angle: 0deg;
+
+  //   content: "";
+  //   position: absolute;
+  //   height: 100%;
+  //   width: 100%;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   z-index: -1;
+  //   padding: 10px;
+
+  //   background: conic-gradient(
+  //     from $angle,
+  //     #ff8a00 0% 25%,
+  //     #00d1ff 25% 50%,
+  //     #ff8a00 50% 75%,
+  //     #00d1ff 75% 100%
+  //   );
+  //   border-radius: 20px;
+  //   opacity: 0.5;
+  //   filter: blur(10px);
+
+  //   animation: spin 10s linear infinite;
+  // }
 
   .swiper-content-wrapper {
     position: relative;
