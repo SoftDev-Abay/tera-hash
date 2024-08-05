@@ -3,6 +3,8 @@ import Board from "@/app/components/Board/Board";
 import "./style.scss";
 import Button from "@/app/components/Button/Button";
 import SlideReveal from "@/app/components/SlideReveal/SlideReveal";
+import { gameURL } from "@/app/assets/Navigation";
+
 const StorySection = () => {
   return (
     <div
@@ -85,14 +87,25 @@ const StorySection = () => {
               </p>
             </SlideReveal>
           </div>
-          <div className="action-button">
+          <a
+            className="action-button"
+            href={gameURL}
+            target="_blank"
+            rel="noreferrer"
+          >
             <Button widthFull>start now</Button>
-          </div>
+          </a>
         </div>
       </div>
-      <div className="action-button-bottom">
+
+      <a
+        className="action-button-bottom"
+        href={gameURL}
+        target="_blank"
+        rel="noreferrer"
+      >
         <Button widthFull>start now</Button>
-      </div>
+      </a>
     </div>
   );
 };

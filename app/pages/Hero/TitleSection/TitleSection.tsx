@@ -2,7 +2,8 @@ import React from "react";
 import Button from "@/app/components/Button/Button";
 import "./style.scss";
 import Image from "next/image";
-
+import { useRouter } from "next/router";
+import { gameURL } from "@/app/assets/Navigation";
 const TitleSection = () => {
   return (
     <div className="container-max-width-1920 title-section">
@@ -22,17 +23,14 @@ const TitleSection = () => {
         </div>
 
         <div className="action-buttons-container">
-          <Button
-            illuminateShadow
-            styleType="primary"
-            onClick={() => {
-              // navigate to the game, href "https://t.me/hash_cats_bot"
-              window.open("https://t.me/hash_cats_bot", "_blank");
-            }}
-          >
-            Play for Free
-          </Button>
-          <Button styleType="standart">Learn More</Button>
+          <a href={gameURL} target="_blank" rel="noreferrer">
+            <Button illuminateShadow styleType="primary">
+              Play for Free
+            </Button>
+          </a>
+          <a href="#about">
+            <Button styleType="standart">Learn More</Button>
+          </a>
         </div>
       </div>
       <div className="img-container">
@@ -57,17 +55,14 @@ const TitleSection = () => {
       </div>
 
       <div className="action-buttons-container-bottom">
-        <Button
-          illuminateShadow
-          styleType="primary"
-          onClick={() => {
-            // navigate to the game, href "https://t.me/hash_cats_bot"
-            window.open("https://t.me/hash_cats_bot", "_blank");
-          }}
-        >
-          Play for Free
-        </Button>
-        <Button styleType="standart">Learn More</Button>
+        <a href={gameURL} target="_blank" rel="noreferrer">
+          <Button illuminateShadow styleType="primary">
+            Play for Free
+          </Button>
+        </a>
+        <a href="#about">
+          <Button styleType="standart">Learn More</Button>
+        </a>
       </div>
     </div>
   );

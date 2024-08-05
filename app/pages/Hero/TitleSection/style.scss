@@ -16,6 +16,18 @@
   align-items: center;
   gap: 50px;
 
+  a {
+    text-decoration: none;
+    flex: 1;
+    width: 100%;
+    display: flex;
+
+    button {
+      width: 100%;
+      flex: 1;
+    }
+  }
+
   .action-buttons-container-bottom {
     display: none;
   }
@@ -244,11 +256,10 @@
       .main-img-cat {
         width: 100%;
         height: auto !important;
-        
       }
 
       .gold-coin-tilted-left {
-        width:133.76px;
+        width: 133.76px;
         height: 133.76px;
         top: 60%;
         left: 13%;
@@ -288,8 +299,7 @@
   }
 }
 
-
-@media (max-width:450px){
+@media (max-width: 450px) {
   .title-section {
     padding-top: 0;
     padding-bottom: 44px;

@@ -6,6 +6,7 @@ import InfoCardsSlider from "./InfoCardsSlider/InfoCardsSlider";
 
 import InGameSlider from "@/app/components/InGameSlider/InGameSlider";
 import useScreenWidth from "@/app/hooks/useScreenWidth";
+import VerticalSlideReveal from "@/app/components/VerticalSlideReveal/VerticalSlideReveal";
 
 const inGameSliderItems = {
   mining: {

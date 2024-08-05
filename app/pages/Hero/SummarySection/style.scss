@@ -10,13 +10,16 @@
 }
 
 .call-to-action-wrapper {
-  // padding-left: 22px;
+  padding-left: 20px;
+
+  padding-right: 162px;
   position: relative;
 
   transform: translateY(50%);
 
   @media (max-width: 1024px) {
     padding-left: 10px;
+    padding-right: 0px;
 
     transform: translateY(0%);
     padding-bottom: 41px;

@@ -42,3 +42,5 @@ export const socialIcons = [
     link: "#",
   },
 ];
+
+export const gameURL = "https://t.me/hash_cats_bot";

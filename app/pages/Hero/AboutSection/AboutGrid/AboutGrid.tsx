@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import "./style.scss";
 import Button from "@/app/components/Button/Button";
 
+import VerticalSlideReveal from "@/app/components/VerticalSlideReveal/VerticalSlideReveal";
+import SlideReveal from "@/app/components/SlideReveal/SlideReveal";
 const aboutGridItems = [
   {
     imgURL: "/imgs/about-section/algorithm.png",
@@ -45,10 +47,12 @@ const AboutGridItem = ({
 }: AboutGridItemProps) => {
   return (
     <div {...rest} className={`about-grid-item ${rest.className}`}>
-      <div className={`about-grid-item-content`}>
-        <img src={imgURL} alt="about-grid-item" />
-        <div className="description">{description}</div>
-      </div>
+      <SlideReveal>
+        <div className={`about-grid-item-content`}>
+          <img src={imgURL} alt="about-grid-item" />
+          <div className="description">{description}</div>
+        </div>
+      </SlideReveal>
     </div>
   );
 };

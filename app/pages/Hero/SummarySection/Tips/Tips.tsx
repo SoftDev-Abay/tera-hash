@@ -4,6 +4,8 @@ import SlideReveal from "@/app/components/SlideReveal/SlideReveal";
 
 import "./style.scss";
 import Image from "next/image";
+import { gameURL } from "@/app/assets/Navigation";
+
 const Tips = () => {
   const delay = 0.25;
 
@@ -50,7 +52,9 @@ const Tips = () => {
             </div>
           </SlideReveal>
         </div>
-        <Button>play hashcats now</Button>
+        <a href={gameURL} target="_blank" rel="noreferrer">
+          <Button>play hashcats now</Button>
+        </a>
         <Image
           src="/imgs/summary-section/tiny-shop.png"
           alt=""
@@ -58,9 +62,14 @@ const Tips = () => {
           height={175}
         />
       </div>
-      <div className="bottom-button-wrapper">
+      <a
+        className="bottom-button-wrapper"
+        href={gameURL}
+        target="_blank"
+        rel="noreferrer"
+      >
         <Button>play hashcats now</Button>
-      </div>
+      </a>
     </div>
   );
 };
