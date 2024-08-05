@@ -10,6 +10,7 @@ const CatPawIcon = ({ className = "", width = 68, height = 65 }: IconProps) => {
       className={className}
       viewBox="0 0 68 65"
       fill="none"
+      style={{ display: "block" }} // Ensures the SVG is displayed
     >
       <g filter="url(#filter0_dd_753_1760)">
         <path
