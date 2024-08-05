@@ -1,18 +1,21 @@
 import React, { Suspense } from "react";
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 import Wrapper from "@/app/pages/Wrapper/Wrapper";
 
-const TitleSection = dynamic(() => import("@/app/pages/Hero/TitleSection/TitleSection"));
-const StorySection = dynamic(() => import("@/app/pages/Hero/StorySection/StorySection"));
-const AboutSection = dynamic(() => import("@/app/pages/Hero/AboutSection"));
-const SummarySection = dynamic(() => import("@/app/pages/Hero/SummarySection"));
+const TitleSection = dynamic(() => import("@/app/pages/Hero/TitleSection/TitleSection"), { ssr: true });
+const StorySection = dynamic(() => import("@/app/pages/Hero/StorySection/StorySection"), { ssr: false });
+const AboutSection = dynamic(() => import("@/app/pages/Hero/AboutSection"), { ssr: false });
+const SummarySection = dynamic(() => import("@/app/pages/Hero/SummarySection"), { ssr: false });
 
-const About = () => {
+const Home = () => {
   return (
     <Wrapper>
-      <Suspense fallback={<div>Loading Title Section...</div>}>
-        <TitleSection />
-      </Suspense>
+      <Head>
+        <title>Your Site Title</title>
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <TitleSection />
       <Suspense fallback={<div>Loading Story Section...</div>}>
         <StorySection />
       </Suspense>
@@ -26,4 +29,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Home;
