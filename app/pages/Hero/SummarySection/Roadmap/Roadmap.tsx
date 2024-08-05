@@ -4,6 +4,7 @@ import CatPawIcon from "@/app/icons/CatPawIcon";
 import ProgressBar from "@/app/components/ProgressBar/ProgressBar";
 
 import { motion, useInView, useAnimation } from "framer-motion";
+import Image from "next/image";
 
 interface RevealProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
@@ -58,10 +59,12 @@ const Roadmap = () => {
     <div className="container-max-width-1920 roadmap-wrapper" id="roadmap">
       <div className="header">Roadmap</div>
       <div className="main">
-        <img
+        <Image
           className="left-cat-img"
           src="/imgs/summary-section/roadmap-cat-right.png"
           alt=""
+          width={333}
+          height={540}
         />
         <div className="info">
           <div className="text-panel text-panel-check text-panel-icon-end">
@@ -69,8 +72,9 @@ const Roadmap = () => {
               <p ref={firstItemRef}>Pre Launch</p>
             </Reveal>
             <div className="icon-img-wrapper check-icon-img-wrapper">
-              <img
+              <Image
                 src="/imgs/summary-section/blue-check-mark.png"
+                alt=""
                 width={26}
                 height={26}
               />
@@ -81,8 +85,9 @@ const Roadmap = () => {
               <p>1,000,000 Users</p>
             </Reveal>
             <div className="icon-img-wrapper check-icon-img-wrapper">
-              <img
+              <Image
                 src="/imgs/summary-section/blue-check-mark.png"
+                alt=""
                 width={26}
                 height={26}
               />
@@ -96,13 +101,19 @@ const Roadmap = () => {
               <ProgressBar bgcolor="black" completed={35} />
             </div>
 
-            <img
+            <Image
               src="/imgs/summary-section/plug-left.svg"
               className="plug-left-img"
+              width={128}
+              height={80}
+              alt=""
             />
-            <img
+            <Image
               src="/imgs/summary-section/plug-right.svg"
               className="plug-right-img"
+              width={108}
+              height={52}
+              alt=""
             />
           </div>
 
@@ -117,9 +128,10 @@ const Roadmap = () => {
             </Reveal>
           </div>
           <div className="text-panel text-panel-icon-start text-panel-ruby">
-            <img
+            <Image
               width={26}
               height={26}
+              alt=""
               src="/imgs/summary-section/ruby-crystal-coin.png"
               className="check-icon"
             />
@@ -133,10 +145,12 @@ const Roadmap = () => {
             </Reveal>
           </div>
         </div>
-        <img
+        <Image
           className="right-cat-img"
           src="/imgs/summary-section/roadmap-cat-left.png"
           alt=""
+          width={333}
+          height={540}
         />
       </div>
     </div>

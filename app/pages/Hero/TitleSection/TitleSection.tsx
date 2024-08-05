@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@/app/components/Button/Button";
 import "./style.scss";
+import Image from "next/image";
 
 const TitleSection = () => {
   return (
@@ -8,9 +9,11 @@ const TitleSection = () => {
       <div className="info-container">
         <p className="action-text">Build your mining empire to become the</p>
         <div className="big-text-img">
-          <img
+          <Image
             src="/imgs/title-section/title-section-big-text-origin.png"
             alt=""
+            width={600}
+            height={600}
           />
         </div>
         <div className="addition-text">
@@ -33,10 +36,13 @@ const TitleSection = () => {
         </div>
       </div>
       <div className="img-container">
-        <img
+        <Image
           className="main-img-cat"
           src="/imgs/title-section/title-section-cat-cut.png"
           alt=""
+          width={500}
+          height={500}
+          // fill
         />
         {/* <img
           className="main-img-cat"

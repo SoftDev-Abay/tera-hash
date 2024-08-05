@@ -7,6 +7,7 @@ import "./style.scss";
 import ChevroletRightIcon from "@/app/icons/ChevroletRightIcon";
 import ChevroletLeftIcon from "@/app/icons/ChevroletLeftIcon";
 import { Navigation } from "swiper/modules";
+import Image from "next/image";
 
 interface Item {
   name: string;
@@ -17,8 +18,8 @@ interface Item {
 interface InGameSliderProps extends React.HTMLAttributes<HTMLDivElement> {
   item: Item;
   uniqueKey: string;
-  imgWidth?: string;
-  imgHeight?: string;
+  imgWidth?: number;
+  imgHeight?: number;
 }
 
 const InGameSlider: React.FC<InGameSliderProps> = ({
@@ -62,7 +63,6 @@ const InGameSlider: React.FC<InGameSliderProps> = ({
     };
   }, []);
 
-  console.log("Swiper uniqueKey", uniqueKey);
 
   return (
     <div className={`${className ? className : ""}  in-game-slider `}>
@@ -81,12 +81,14 @@ const InGameSlider: React.FC<InGameSliderProps> = ({
           >
             {imgsURL.map((URL, index) => (
               <SwiperSlide key={URL + index}>
-                <img
+                <Image
                   src={URL}
                   alt={URL}
+                  width={imgWidth}
+                  height={imgHeight}
                   style={{
-                    width: imgWidth ? `${imgWidth}` : "auto",
-                    height: imgHeight ? `${imgHeight}` : "auto",
+                    width: imgWidth ? `${imgWidth}px` : "100%",
+                    height: imgHeight ? `${imgHeight}px` : "100%",
                   }}
                 />
               </SwiperSlide>

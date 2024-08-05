@@ -3,6 +3,7 @@ import Button from "@/app/components/Button/Button";
 import SlideReveal from "@/app/components/SlideReveal/SlideReveal";
 
 import "./style.scss";
+import Image from "next/image";
 const Tips = () => {
   const delay = 0.25;
 
@@ -24,7 +25,12 @@ const Tips = () => {
             </div>
           </SlideReveal>
         </div>
-        <img src="/imgs/about-section/referral-bonus.png" alt="" />
+        <Image
+          src="/imgs/about-section/referral-bonus.png"
+          alt=""
+          width={175}
+          height={175}
+        />
       </div>
       <div className="tip-container">
         <div className="text-container">
@@ -45,7 +51,12 @@ const Tips = () => {
           </SlideReveal>
         </div>
         <Button>play hashcats now</Button>
-        <img src="/imgs/summary-section/tiny-shop.png" alt="" />
+        <Image
+          src="/imgs/summary-section/tiny-shop.png"
+          alt=""
+          width={175}
+          height={175}
+        />
       </div>
       <div className="bottom-button-wrapper">
         <Button>play hashcats now</Button>
