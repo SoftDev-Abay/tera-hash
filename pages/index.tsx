@@ -9,14 +9,20 @@ const SummarySection = dynamic(() => import("@/app/pages/Hero/SummarySection"));
 
 const About = () => {
   return (
-    <>
-      <Wrapper>
+    <Wrapper>
+      <Suspense fallback={<div>Loading Title Section...</div>}>
         <TitleSection />
+      </Suspense>
+      <Suspense fallback={<div>Loading Story Section...</div>}>
         <StorySection />
+      </Suspense>
+      <Suspense fallback={<div>Loading About Section...</div>}>
         <AboutSection />
+      </Suspense>
+      <Suspense fallback={<div>Loading Summary Section...</div>}>
         <SummarySection />
-      </Wrapper>
-    </>
+      </Suspense>
+    </Wrapper>
   );
 };
 
