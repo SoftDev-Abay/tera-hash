@@ -1,19 +1,28 @@
-import React from "react";
+import React, { Suspense } from "react";
+import dynamic from 'next/dynamic';
 import Wrapper from "@/app/pages/Wrapper/Wrapper";
-import TitleSection from "@/app/pages/Hero/TitleSection/TitleSection";
-import StorySection from "@/app/pages/Hero/StorySection/StorySection";
-import AboutSection from "@/app/pages/Hero/AboutSection";
-import SummarySection from "@/app/pages/Hero/SummarySection";
+
+const TitleSection = dynamic(() => import("@/app/pages/Hero/TitleSection/TitleSection"));
+const StorySection = dynamic(() => import("@/app/pages/Hero/StorySection/StorySection"));
+const AboutSection = dynamic(() => import("@/app/pages/Hero/AboutSection"));
+const SummarySection = dynamic(() => import("@/app/pages/Hero/SummarySection"));
+
 const About = () => {
   return (
-    <>
-      <Wrapper>
+    <Wrapper>
+      <Suspense fallback={<div>Loading Title Section...</div>}>
         <TitleSection />
+      </Suspense>
+      <Suspense fallback={<div>Loading Story Section...</div>}>
         <StorySection />
+      </Suspense>
+      <Suspense fallback={<div>Loading About Section...</div>}>
         <AboutSection />
+      </Suspense>
+      <Suspense fallback={<div>Loading Summary Section...</div>}>
         <SummarySection />
-      </Wrapper>
-    </>
+      </Suspense>
+    </Wrapper>
   );
 };
 
