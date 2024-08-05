@@ -11,9 +11,9 @@ const inGameSliderItems = {
   mining: {
     name: "Mine",
     imgsURL: [
+      "/imgs/about-section/safe.png",
       "/imgs/about-section/shop-item-tiny-shop.png",
-      "/imgs/about-section/shop-item-tiny-shop.png",
-      "/imgs/about-section/shop-item-tiny-shop.png",
+      "/imgs/about-section/pile-of-boxes.png",
     ],
     description:
       "Upgrade your mining farm to generate passive income. Check the app regularly to collect your profits.",
@@ -22,8 +22,9 @@ const inGameSliderItems = {
   stakes: {
     name: "Stake",
     imgsURL: [
-      "/imgs/about-section/shop-item-cat.png",
-      "/imgs/about-section/shop-item-cat.png",
+      "/imgs/about-section/fat-face-cat.png",
+      "/imgs/about-section/in-spirit-cat.png",
+      "/imgs/about-section/king-cat.png",
     ],
     description: " Stake your funds to level up and earn regular rewards",
   },
