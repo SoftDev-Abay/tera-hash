@@ -26,20 +26,19 @@ export const socialIcons = [
   },
   {
     icon: <YoutubeIcon width={24} height={24} />,
-    link: "#",
+    link: "https://www.youtube.com/channel/UC4r4rtgD7e0HTJlZagKxEcQ",
   },
   {
     icon: <ThreadsIcon width={24} height={24} />,
-    link: "#",
+    link: "https://x.com/HashCatsGame",
   },
-
   {
     icon: <DiscordIcon width={24} height={24} />,
-    link: "#",
+    link: "https://discord.gg/xFGNtxGEYc ",
   },
   {
     icon: <InstagramIcon width={24} height={24} />,
-    link: "#",
+    link: "https://www.instagram.com/hashcats_official?igsh=MTBqOHBtbzkzaWZuag%3D%3D&utm_source=qr ",
   },
 ];
 

@@ -19,7 +19,7 @@ const TitleSection = () => {
           />
         </div>
         <div className="addition-text">
-          Tap, upgrade equipment, earn <span>Hashcoin,</span> and wait for
+          Tap, upgrade equipment, earn <span>$HASH,</span> and wait for
           airdrop
         </div>
 

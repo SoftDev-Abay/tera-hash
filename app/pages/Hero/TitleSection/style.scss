@@ -39,7 +39,7 @@
 
 .title-section {
   position: relative;
-  z-index: 1000;
+  // z-index: 1000;
 
   min-height: 800px;
 
@@ -54,6 +54,8 @@
   display: flex;
   align-items: center;
   gap: 50px;
+
+  box-shadow: inset 12px 0 15px -4px #171717, inset -12px 0 8px -4px #171717;
 
   a {
     text-decoration: none;

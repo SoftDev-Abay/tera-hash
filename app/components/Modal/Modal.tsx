@@ -7,22 +7,16 @@ import CloseIcon from "@/app/icons/CloseIcon";
 import Backdrop from "./Backdrop";
 import FacebookIcon from "@/app/icons/FacebookIcon";
 import InstagramIcon from "@/app/icons/InstagramIcon";
+import RootModalContent from "@/app/pages/Wrapper/RootModalContent";
 
 type Props = {
   isShow: boolean;
   handleClose: Function;
-  children: React.ReactNode;
   maxWidth?: number;
   display?: string;
 };
 
-const Modal: React.FC<Props> = ({
-  isShow,
-  handleClose,
-  maxWidth,
-  display,
-  children,
-}) => {
+const Modal: React.FC<Props> = ({ isShow, handleClose, maxWidth, display }) => {
   const [isRenderedOnServerSide, setIsRenderedOnServerSide] =
     useState<boolean>(false);
   useEffect(() => {
@@ -64,7 +58,11 @@ const Modal: React.FC<Props> = ({
               <CloseIcon width={18} height={18} />
             </div>
           </div>
-          <div className={styles.modalMain}>{children}</div>
+          <div className={styles.modalMain}>
+            <RootModalContent 
+              handleClose={closeModal}
+            />
+          </div>
         </div>
       </div>
       <Backdrop onClick={closeModal} transparent={true} />

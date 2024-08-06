@@ -38,9 +38,7 @@ const Navbar = () => {
           <MenuIcon />
         </div>
       </div>
-      <Modal isShow={isShow} handleClose={handleClose}>
-        <RootModalContent />
-      </Modal>
+      <Modal isShow={isShow} handleClose={handleClose} />
     </>
   );
 };

@@ -7,19 +7,23 @@ import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 import CloseIcon from "@/app/icons/CloseIcon";
 import { navigationLinks, socialIcons } from "@/app/assets/Navigation";
-const RootModalContent = () => {
+const RootModalContent = ({ handleClose }: { handleClose: Function }) => {
   const router = useRouter();
-
-  const isActive = (path: string) => router.pathname === path;
 
   return (
     <div className="root-modal-content">
       <div className="root-modal-navigation">
         {navigationLinks.map((link) => (
-          <a href={link.link}>{link.name}</a>
+          <a
+            onClick={() => {
+              handleClose();
+              router.push(link.link);
+            }}
+          >
+            {link.name}
+          </a>
         ))}
       </div>
-
 
       <div className="root-modal-social-icons">
         {socialIcons.map((icon) => (

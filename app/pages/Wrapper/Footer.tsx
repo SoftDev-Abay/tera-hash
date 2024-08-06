@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.scss";
 import { navigationLinks, socialIcons } from "@/app/assets/Navigation";
-
 const Footer = () => {
   return (
     <div className="footer">

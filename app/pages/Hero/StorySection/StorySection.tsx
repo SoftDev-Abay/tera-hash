@@ -4,6 +4,7 @@ import "./style.scss";
 import Button from "@/app/components/Button/Button";
 import SlideReveal from "@/app/components/SlideReveal/SlideReveal";
 import { gameURL } from "@/app/assets/Navigation";
+import VideoComponent from "@/app/components/VideoComponent/VideoComponent";
 
 const StorySection = () => {
   return (
@@ -42,9 +43,11 @@ const StorySection = () => {
               </div>
             </SlideReveal>
           </div>
-          <video width="100%" height="100%" autoPlay muted loop playsInline>
+          <VideoComponent src="/videos/hash-cats-video.mp4" type="video/mp4" />
+
+          {/* <video width="100%" height="100%" autoPlay muted loop playsInline>
             <source src="/videos/hash-cats-video.mp4" type="video/mp4" />
-          </video>
+          </video> */}
         </div>
       </div>
       <div className="mining">
