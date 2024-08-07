@@ -48,9 +48,9 @@ const Modal: React.FC<Props> = ({ isShow, handleClose, maxWidth, display }) => {
           <div className={styles.modalTop}>
             <img
               className={styles.modalLogo}
-              src="/logo.png"
+              src="/logo-narrow.png"
               alt="Logo"
-              width="100"
+              width="102"
               height="68"
             />
 
@@ -59,9 +59,7 @@ const Modal: React.FC<Props> = ({ isShow, handleClose, maxWidth, display }) => {
             </div>
           </div>
           <div className={styles.modalMain}>
-            <RootModalContent 
-              handleClose={closeModal}
-            />
+            <RootModalContent handleClose={closeModal} />
           </div>
         </div>
       </div>

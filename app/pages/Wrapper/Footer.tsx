@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer">
       <div className="left">
         <div className="logo-mobile">
-          <img src="/logo.png" alt="Logo" />
+          <img src="/logo-narrow.png" alt="Logo" width="102" height="68" />
         </div>
 
         <div className="navigation">
@@ -15,7 +15,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="logo">
-          <img src="/logo-full-width.png" alt="Logo" />
+          <img src="/logo-wide.png" alt="Logo" height={49} />
         </div>
       </div>
       <div className="right">

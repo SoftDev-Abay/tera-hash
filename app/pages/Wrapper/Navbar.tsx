@@ -20,7 +20,13 @@ const Navbar = () => {
     <>
       <div className="navbar">
         <div className="logo">
-          <Image src="/logo.png" alt="Logo" priority width="102" height="67" />
+          <Image
+            src="/logo-narrow.png"
+            alt="Logo"
+            priority
+            width="102"
+            height="68"
+          />
         </div>
         <div className="navigation">
           {navigationLinks.map((link) => (
