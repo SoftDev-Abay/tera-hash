@@ -20,10 +20,9 @@ const Navbar = () => {
     <>
       <div className="navbar">
         <div className="logo">
-          <Image
+          <img
             src="/logo-narrow.png"
             alt="Logo"
-            priority
             width="102"
             height="68"
           />
