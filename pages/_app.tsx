@@ -44,7 +44,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:url" content="https://tera-hash.vercel.app/" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="/gold-coin.png" />
+        <meta
+          property="og:image"
+          content="https://tera-hash.vercel.app/gold-coin.png"
+        />
 
         {/* Twitter */}
 
@@ -52,7 +55,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="twitter:url" content="https://tera-hash.vercel.app/" />
         <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={pageDescription} />
-        <meta property="twitter:image" content="/gold-coin.png" />
+        <meta
+          property="twitter:image"
+          content="https://tera-hash.vercel.app/gold-coin.png"
+        />
       </Head>
       <Suspense fallback={<div>Loading...</div>}>
         <Component {...pageProps} />
