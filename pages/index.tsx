@@ -1,7 +1,10 @@
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import Wrapper from "@/app/pages/Wrapper/Wrapper";
+
+const Wrapper = dynamic(() => import("@/app/pages/Wrapper/Wrapper"), {
+  ssr: true,
+});
 
 const TitleSection = dynamic(
   () => import("@/app/pages/Hero/TitleSection/TitleSection"),
