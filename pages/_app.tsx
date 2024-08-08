@@ -44,12 +44,17 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:url" content="https://tera-hash.vercel.app/" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content="/favicon.ico" />
 
         {/* Twitter */}
 
         <meta property="twitter:url" content="https://tera-hash.vercel.app/" />
         <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={pageDescription} />
+        <meta property="twitter:image" content="/favicon.ico" />
+        
+
+
       </Head>
       <Suspense fallback={<div>Loading...</div>}>
         <Component {...pageProps} />
