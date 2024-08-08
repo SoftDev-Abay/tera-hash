@@ -27,7 +27,14 @@ const RootModalContent = ({ handleClose }: { handleClose: Function }) => {
 
       <div className="root-modal-social-icons">
         {socialIcons.map((icon) => (
-          <a href={icon.link} target="_blank" rel="noreferrer">
+          <a
+            href={icon.link}
+            onClick={() => {
+              handleClose();
+            }}
+            target="_blank"
+            rel="noreferrer"
+          >
             {icon.icon}
           </a>
         ))}

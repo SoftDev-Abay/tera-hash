@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://tera-hash.vercel.app/" />
+        <meta property="og:url" content="https://tera-hash.vercel.app" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta
@@ -52,7 +52,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* Twitter */}
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://tera-hash.vercel.app/" />
+        <meta property="twitter:url" content="https://tera-hash.vercel.app" />
         <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={pageDescription} />
         <meta
