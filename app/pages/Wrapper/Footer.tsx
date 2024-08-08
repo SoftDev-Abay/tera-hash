@@ -21,7 +21,9 @@ const Footer = () => {
       <div className="right">
         <div className="social-icons">
           {socialIcons.map((icon) => (
-            <a href={icon.link}>{icon.icon}</a>
+            <a href={icon.link} target="_blank" rel="noreferrer">
+              {icon.icon}
+            </a>
           ))}
         </div>
         <div className="copyright"> HashCats 2024. All Rights Reserved. </div>

@@ -20,11 +20,21 @@ const Navbar = () => {
     <>
       <div className="navbar">
         <div className="logo">
-          <img
+          {/* <img
             src="/logo-narrow.png"
             alt="Logo"
             width="102"
             height="68"
+          /> */}
+          <div
+            style={{
+              width: "102px",
+              height: "68px",
+              position: "relative",
+              backgroundImage: "url(/logo-narrow.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           />
         </div>
         <div className="navigation">
@@ -35,7 +45,11 @@ const Navbar = () => {
 
         <div className="social-icons">
           {socialIcons.map((icon) => (
-            <a href={icon.link}>{icon.icon}</a>
+            <a href={icon.link}
+              target="_blank"
+              rel="noreferrer"
+            
+            >{icon.icon}</a>
           ))}
         </div>
 
